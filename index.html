@@ -7,28 +7,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700;900&family=Nunito:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Сказочная палитра Диснея */
-            --bg-deep: #160824;         
-            --bg-sunset: #431a5c;       
-            --bg-velvet: #280d3d;       
+            /* Новая строгая и стильная палитра */
+            --bg-deep: #090c10;         
+            --bg-sunset: #161b22;       
+            --bg-velvet: #21262d;       
             
-            --magic-light: #fff3cc;     
-            --magic-main: #ffd700;      /* Сияющее золото */
-            --magic-dark: #b39200;      
+            --magic-light: #e0f2fe;     
+            --magic-main: #38bdf8;      /* Яркий циан/голубой */
+            --magic-dark: #0284c7;      
             
-            --warm-star: #ffdf70;       
-            --cute-pink: #ff8fa3;       
+            --warm-star: #fbbf24;       
+            --cute-pink: #fb7185;       
             
-            --text-main: #fcf8ff;       
-            --text-muted: #d5c8e3;      
+            --text-main: #f0f6fc;       
+            --text-muted: #8b949e;      
             
             --font-title: 'Comfortaa', cursive;
             --font-text: 'Nunito', sans-serif;
         }
 
         body {
-            /* Убрана картинка, добавлено волшебное свечение градиентом */
-            background: radial-gradient(circle at 50% 0%, #461b66 0%, #170726 80%);
+            background: radial-gradient(circle at 50% 0%, #161b22 0%, #090c10 80%);
             color: var(--text-main);
             font-family: var(--font-text);
             margin: 0;
@@ -48,135 +47,132 @@
         @media (max-width: 1550px) { .girl-col { display: none; } }
 
         @keyframes glowPulse {
-            0% { box-shadow: 0 15px 40px rgba(0,0,0,0.6), 0 0 20px rgba(255, 215, 0, 0.15); }
-            50% { box-shadow: 0 15px 40px rgba(0,0,0,0.6), 0 0 40px rgba(255, 215, 0, 0.4); }
-            100% { box-shadow: 0 15px 40px rgba(0,0,0,0.6), 0 0 20px rgba(255, 215, 0, 0.15); }
+            0% { box-shadow: 0 15px 40px rgba(0,0,0,0.6), 0 0 20px rgba(56, 189, 248, 0.1); }
+            50% { box-shadow: 0 15px 40px rgba(0,0,0,0.6), 0 0 40px rgba(56, 189, 248, 0.25); }
+            100% { box-shadow: 0 15px 40px rgba(0,0,0,0.6), 0 0 20px rgba(56, 189, 248, 0.1); }
         }
 
         .container {
             width: 100%; max-width: 1150px; min-height: 80vh; 
-            background: rgba(22, 8, 36, 0.75); backdrop-filter: blur(16px); 
+            background: rgba(9, 12, 16, 0.75); backdrop-filter: blur(16px); 
             position: relative; 
             animation: glowPulse 5s infinite;
-            border: 2px solid var(--magic-dark); border-radius: 24px; padding: 4px; 
+            border: 2px solid var(--magic-dark); border-radius: 4px; padding: 4px; 
         }
 
-        .container::before {
-            content: ''; position: absolute; top: 6px; left: 6px; right: 6px; bottom: 6px;
-            border: 1px dashed rgba(255, 215, 0, 0.4); border-radius: 18px; pointer-events: none; z-index: 10;
-        }
+        /* Убрана пунктирная линия контейнера */
 
-        .content-wrapper { background: rgba(40, 13, 61, 0.7); position: relative; z-index: 2; height: 100%; border-radius: 18px; min-height: 80vh; }
+        .content-wrapper { background: rgba(22, 27, 34, 0.7); position: relative; z-index: 2; height: 100%; border-radius: 4px; min-height: 80vh; }
 
         .header {
             padding: 35px 30px 25px; text-align: center; position: relative;
-            border-bottom: 2px solid rgba(255, 215, 0, 0.3); 
-            background: radial-gradient(circle at 50% 0%, rgba(255, 215, 0, 0.1) 0%, transparent 80%);
-            border-top-left-radius: 18px; border-top-right-radius: 18px;
+            border-bottom: 2px solid rgba(56, 189, 248, 0.3); 
+            background: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.05) 0%, transparent 80%);
+            border-top-left-radius: 4px; border-top-right-radius: 4px;
         }
         .header::after {
             content: '✨'; position: absolute; bottom: -14px; left: 50%; transform: translateX(-50%);
             color: var(--magic-main); font-size: 20px; background: var(--bg-deep); padding: 0 15px;
-            border-radius: 20px; border: 1px solid rgba(255, 215, 0, 0.4); text-shadow: 0 0 15px var(--magic-main);
+            border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.4); text-shadow: 0 0 15px var(--magic-main);
         }
 
         @keyframes float {
             0% { transform: translateY(0px); }
-            50% { transform: translateY(-6px); }
+            50% { transform: translateY(-4px); }
             100% { transform: translateY(0px); }
         }
 
         .header-top h1 { 
             font-family: var(--font-title); font-size: 46px; font-weight: 900; margin: 0 0 15px 0;
             position: relative; display: inline-block; color: #ffffff;
-            text-shadow: 0 4px 8px rgba(0,0,0,0.6), 0 0 20px rgba(255, 215, 0, 0.6); 
+            text-shadow: 0 4px 8px rgba(0,0,0,0.6), 0 0 20px rgba(56, 189, 248, 0.4); 
             animation: float 4s ease-in-out infinite;
         }
         .header-top h1::before, .header-top h1::after {
-            content: '✨'; display: inline-block; font-size: 26px; vertical-align: middle; margin: 0 15px;
-            filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.8)); 
+            content: '✦'; display: inline-block; font-size: 26px; vertical-align: middle; margin: 0 15px;
+            filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.6)); 
         }
 
         .back-btn {
             position: absolute; top: 20px; left: 30px; display: inline-flex; align-items: center; gap: 10px;
-            background: rgba(255, 215, 0, 0.15); color: var(--magic-main); text-decoration: none;
-            padding: 10px 20px; border-radius: 30px; border: 1px solid rgba(255, 215, 0, 0.4);
+            background: rgba(56, 189, 248, 0.1); color: var(--magic-main); text-decoration: none;
+            padding: 10px 20px; border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.4);
             font-family: var(--font-title); font-weight: 700; font-size: 15px; transition: all 0.3s ease; z-index: 10;
         }
-        .back-btn:hover { background: var(--magic-main); color: var(--bg-deep); box-shadow: 0 0 20px rgba(255, 215, 0, 0.6); transform: translateY(-2px); }
+        .back-btn:hover { background: var(--magic-main); color: var(--bg-deep); box-shadow: 0 0 20px rgba(56, 189, 248, 0.4); transform: translateY(-2px); }
 
         .creator-badge {
             position: absolute; top: 20px; right: 30px; display: flex; align-items: center; gap: 10px;
-            background: rgba(40, 13, 61, 0.8); padding: 6px 12px 6px 6px; cursor: pointer;
-            transition: all 0.3s ease; opacity: 0.9; border-radius: 30px; border: 1px solid rgba(255, 215, 0, 0.3);
+            background: rgba(22, 27, 34, 0.8); padding: 6px 12px 6px 6px; cursor: pointer;
+            transition: all 0.3s ease; opacity: 0.9; border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.3);
         }
-        .creator-badge:hover { opacity: 1; background: rgba(255, 215, 0, 0.15); border-color: var(--magic-main); box-shadow: 0 0 20px rgba(255, 215, 0, 0.4); transform: translateY(-2px); }
-        .creator-badge img { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 2px solid var(--magic-main); transition: all 0.3s ease; }
+        .creator-badge:hover { opacity: 1; background: rgba(56, 189, 248, 0.1); border-color: var(--magic-main); box-shadow: 0 0 20px rgba(56, 189, 248, 0.3); transform: translateY(-2px); }
+        .creator-badge img { width: 38px; height: 38px; border-radius: 4px; object-fit: cover; border: 2px solid var(--magic-main); transition: all 0.3s ease; }
         .creator-info { display: flex; flex-direction: column; text-align: left; transition: all 0.3s ease; }
         .creator-label { font-size: 10px; color: var(--magic-light); text-transform: uppercase; letter-spacing: 1px; font-family: var(--font-title); display: none; }
         .creator-name { font-size: 16px; font-weight: 700; color: #fff; font-family: var(--font-text); transition: text-shadow 0.3s ease;}
-        .creator-badge:hover .creator-name { text-shadow: 0 0 10px rgba(255, 215, 0, 0.9); color: var(--magic-light); }
+        .creator-badge:hover .creator-name { text-shadow: 0 0 10px rgba(56, 189, 248, 0.7); color: var(--magic-light); }
 
         .controls-panel { display: flex; gap: 15px; flex-wrap: wrap; align-items: center; justify-content: center; margin-top: 5px; }
         
         .search-box, .sort-select {
-            background: rgba(22, 8, 36, 0.7); border: 1px solid rgba(255, 215, 0, 0.4); border-radius: 25px;
+            background: rgba(9, 12, 16, 0.7); border: 1px solid rgba(56, 189, 248, 0.4); border-radius: 4px;
             padding: 0 18px; color: var(--magic-light); font-size: 15px; font-family: var(--font-text);
             outline: none; transition: all 0.3s ease; text-align: left; 
             box-sizing: border-box; height: 42px; 
         }
         .search-box { width: 220px; }
         .search-box::placeholder { color: var(--text-muted); }
-        .search-box:focus, .sort-select:focus { border-color: var(--magic-main); color: #fff; box-shadow: 0 0 15px rgba(255, 215, 0, 0.3); }
+        .search-box:focus, .sort-select:focus { border-color: var(--magic-main); color: #fff; box-shadow: 0 0 15px rgba(56, 189, 248, 0.2); }
         
         .sort-select { 
             cursor: pointer; appearance: none; padding-right: 35px; 
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23ffd700' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E"); 
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%2338bdf8' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E"); 
             background-repeat: no-repeat; background-position: right 14px center; 
         }
         .sort-select option { background: var(--bg-deep); color: var(--magic-light); }
 
         .view-toggle-btn {
-            background: rgba(255, 215, 0, 0.15); border: 1px solid var(--magic-main); border-radius: 25px;
+            background: rgba(56, 189, 248, 0.1); border: 1px solid var(--magic-main); border-radius: 4px;
             padding: 0 20px; color: var(--magic-main); font-size: 15px; font-family: var(--font-title); font-weight: 700;
             cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 8px;
             box-sizing: border-box; height: 42px;
         }
-        .view-toggle-btn:hover { background: var(--magic-main); color: var(--bg-deep); box-shadow: 0 0 20px rgba(255, 215, 0, 0.5); transform: translateY(-2px); }
+        .view-toggle-btn:hover { background: var(--magic-main); color: var(--bg-deep); box-shadow: 0 0 20px rgba(56, 189, 248, 0.3); transform: translateY(-2px); }
 
         /* ================= ТАБЛИЧНЫЙ ВИД (СПИСОК) ================= */
         table { width: 100%; border-collapse: separate; border-spacing: 0; text-align: left; table-layout: fixed; }
-        th { text-align: center; color: var(--magic-main); font-weight: 700; font-size: 14px; text-transform: uppercase; padding: 25px 12px 15px; border-bottom: 2px solid rgba(255, 215, 0, 0.3); font-family: var(--font-title); letter-spacing: 2px; text-shadow: 0 0 10px rgba(255, 215, 0, 0.3); }
-        td { padding: 20px 15px; vertical-align: top; border-bottom: 1px dashed rgba(255, 215, 0, 0.2); }
+        th { text-align: center; color: var(--magic-main); font-weight: 700; font-size: 14px; text-transform: uppercase; padding: 25px 12px 15px; border-bottom: 2px solid rgba(56, 189, 248, 0.3); font-family: var(--font-title); letter-spacing: 2px; text-shadow: 0 0 10px rgba(56, 189, 248, 0.2); }
+        td { padding: 20px 15px; vertical-align: top; border-bottom: 1px solid rgba(56, 189, 248, 0.15); }
         tr:last-child td { border-bottom: none; }
         td:nth-child(1), td:nth-child(3), td:nth-child(4), td:nth-child(5) { text-align: center; }
         tr.movie-row { cursor: pointer; transition: all 0.4s ease; position: relative; }
-        tr.movie-row:hover { background-color: rgba(255, 215, 0, 0.05); } 
+        tr.movie-row:hover { background-color: rgba(56, 189, 248, 0.05); } 
         td:nth-child(2) { text-align: left; position: relative; z-index: 1; overflow: hidden; }
-        td:nth-child(2)::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at 25% 50%, rgba(255, 215, 0, 0.08) 0%, transparent 70%); z-index: -1; pointer-events: none; transition: opacity 0.4s ease; opacity: 0; }
+        td:nth-child(2)::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(ellipse at 25% 50%, rgba(56, 189, 248, 0.05) 0%, transparent 70%); z-index: -1; pointer-events: none; transition: opacity 0.4s ease; opacity: 0; }
         tr.movie-row:hover td:nth-child(2)::before { opacity: 1; }
         
-        .poster-wrapper { width: 140px; height: 210px; overflow: hidden; margin: 0 auto; box-shadow: 0 8px 25px rgba(0,0,0,0.6); border: 2px solid rgba(255, 215, 0, 0.5); border-radius: 16px; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); background: var(--bg-deep); }
-        .poster-wrapper img { width: 100%; height: 100%; object-fit: cover; border-radius: 14px; } 
-        tr.movie-row:has(.poster-wrapper:hover) .poster-wrapper { box-shadow: 0 15px 35px rgba(255, 215, 0, 0.4); border-color: var(--magic-main); transform: scale(1.05); }
+        .poster-wrapper { width: 140px; height: 210px; overflow: hidden; margin: 0 auto; box-shadow: 0 8px 25px rgba(0,0,0,0.6); border: 2px solid rgba(56, 189, 248, 0.5); border-radius: 4px; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); background: var(--bg-deep); }
+        .poster-wrapper img { width: 100%; height: 100%; object-fit: cover; border-radius: 2px; } 
+        tr.movie-row:has(.poster-wrapper:hover) .poster-wrapper { box-shadow: 0 15px 35px rgba(56, 189, 248, 0.3); border-color: var(--magic-main); transform: scale(1.05); }
         
         .movie-info { display: flex; flex-direction: column; gap: 8px; padding-left: 10px; overflow: hidden; }
         .movie-header { display: flex; align-items: flex-start; justify-content: flex-start; gap: 12px; width: 100%; margin-bottom: 5px; } 
-        .movie-title { font-size: 26px; font-weight: 900; color: #fff; font-family: var(--font-title); text-shadow: 0 2px 8px rgba(0,0,0,0.8), 0 0 10px rgba(255, 215, 0, 0.3); flex: 0 1 auto; min-width: 0; line-height: 1.2; transition: text-shadow 0.3s; }
-        tr.movie-row:hover .movie-title { text-shadow: 0 2px 8px rgba(0,0,0,0.8), 0 0 15px rgba(255, 215, 0, 0.7); color: var(--magic-light); }
+        .movie-title { font-size: 26px; font-weight: 900; color: #fff; font-family: var(--font-title); text-shadow: 0 2px 8px rgba(0,0,0,0.8), 0 0 10px rgba(56, 189, 248, 0.2); flex: 0 1 auto; min-width: 0; line-height: 1.2; transition: text-shadow 0.3s; }
+        tr.movie-row:hover .movie-title { text-shadow: 0 2px 8px rgba(0,0,0,0.8), 0 0 15px rgba(56, 189, 248, 0.5); color: var(--magic-light); }
         .movie-meta-box { display: flex; align-items: center; gap: 10px; flex-shrink: 0; margin-top: 1px; }
         .movie-year { color: var(--magic-light); font-size: 18px; font-weight: 700; opacity: 0.9; white-space: nowrap; flex-shrink: 0; } 
         
-        .copy-btn { background: rgba(255, 215, 0, 0.15); border: 1px solid transparent; color: var(--magic-main); cursor: pointer; padding: 6px; border-radius: 10px; display: flex; align-items: center; justify-content: center; transition: all 0.3s; opacity: 0; transform: scale(0.8); position: relative; top: 2px; flex-shrink: 0; }
+        .copy-btn { background: rgba(56, 189, 248, 0.1); border: 1px solid transparent; color: var(--magic-main); cursor: pointer; padding: 6px; border-radius: 4px; display: flex; align-items: center; justify-content: center; transition: all 0.3s; opacity: 0; transform: scale(0.8); position: relative; top: 2px; flex-shrink: 0; }
         tr.movie-row:hover .copy-btn { opacity: 1; transform: scale(1); }
-        .copy-btn:hover { background: var(--magic-main); color: var(--bg-deep); box-shadow: 0 0 15px rgba(255, 215, 0, 0.6); } 
+        .copy-btn:hover { background: var(--magic-main); color: var(--bg-deep); box-shadow: 0 0 15px rgba(56, 189, 248, 0.4); } 
 
         .badges-container { display: flex; align-items: center; gap: 8px; margin: 2px 0; flex-wrap: wrap; }
-        .content-type-badge { background: var(--magic-main); color: var(--bg-deep); padding: 4px 12px; font-size: 11px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; font-family: var(--font-text); border-radius: 12px; box-shadow: 0 3px 10px rgba(255, 215, 0, 0.4); }
-        .outline-badge, .tmdb-badge { border: 1px solid rgba(255, 215, 0, 0.6); color: var(--magic-light); padding: 4px 12px; font-size: 11px; font-weight: 700; background: rgba(255, 215, 0, 0.1); border-radius: 12px; font-family: var(--font-text); letter-spacing: 0.5px; backdrop-filter: blur(4px); }
+        .content-type-badge { background: var(--magic-main); color: var(--bg-deep); padding: 4px 12px; font-size: 11px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; font-family: var(--font-text); border-radius: 4px; box-shadow: 0 3px 10px rgba(56, 189, 248, 0.3); }
+        .outline-badge, .tmdb-badge { border: 1px solid rgba(56, 189, 248, 0.5); color: var(--magic-light); padding: 4px 12px; font-size: 11px; font-weight: 700; background: rgba(56, 189, 248, 0.05); border-radius: 4px; font-family: var(--font-text); letter-spacing: 0.5px; backdrop-filter: blur(4px); }
 
         .movie-genres { font-size: 14px; color: var(--magic-light); font-weight: 600; opacity: 0.9; }
-        .movie-tagline { font-size: 14px; color: var(--text-muted); font-style: italic; border-left: 3px solid var(--cute-pink); padding-left: 10px; background: linear-gradient(to right, rgba(255, 143, 163, 0.1), transparent); border-radius: 0 8px 8px 0; }
+        .movie-tagline { font-size: 14px; color: var(--text-muted); font-style: italic; border-left: 3px solid var(--cute-pink); padding-left: 10px; background: linear-gradient(to right, rgba(251, 113, 133, 0.05), transparent); border-radius: 0 4px 4px 0; }
         .movie-studios-list { font-size: 12px; color: var(--warm-star); font-weight: 700; letter-spacing: 0.5px; margin-top: 2px; }
 
         .movie-overview-wrapper { margin-top: 8px; max-height: 48px; overflow: hidden; transition: max-height 0.5s ease; }
@@ -186,31 +182,31 @@
 
         .requester-badge { display: flex; flex-direction: column; align-items: center; gap: 8px; cursor: pointer; transition: transform 0.3s; margin: 0 auto; }
         .requester-badge:hover { transform: scale(1.05); }
-        .requester-badge:hover .req-avatar { border-color: var(--magic-light); box-shadow: 0 0 20px rgba(255, 215, 0, 0.6); }
-        .requester-badge:hover .req-name { color: #fff; text-shadow: 0 0 10px rgba(255, 215, 0, 0.8); }
-        .req-avatar { width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-title); font-size: 20px; color: var(--bg-deep); font-weight: 900; box-shadow: 0 6px 15px rgba(0,0,0,0.5); object-fit: cover; border: 2px solid var(--magic-main); transition: all 0.3s; background: var(--magic-light); }
+        .requester-badge:hover .req-avatar { border-color: var(--magic-light); box-shadow: 0 0 20px rgba(56, 189, 248, 0.4); }
+        .requester-badge:hover .req-name { color: #fff; text-shadow: 0 0 10px rgba(56, 189, 248, 0.6); }
+        .req-avatar { width: 48px; height: 48px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-family: var(--font-title); font-size: 20px; color: var(--bg-deep); font-weight: 900; box-shadow: 0 6px 15px rgba(0,0,0,0.5); object-fit: cover; border: 2px solid var(--magic-main); transition: all 0.3s; background: var(--magic-light); }
         .req-name { font-family: var(--font-text); font-size: 15px; font-weight: 800; color: var(--magic-light); transition: all 0.3s; }
         
-        .date-badge, .time-box { font-size: 14px; color: var(--magic-light); font-weight: 700; background: rgba(22, 8, 36, 0.8); border: 1px solid rgba(255, 215, 0, 0.3); padding: 6px 14px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.4); display: inline-flex; justify-content: center; align-items: center; gap: 6px; backdrop-filter: blur(4px); }
+        .date-badge, .time-box { font-size: 14px; color: var(--magic-light); font-weight: 700; background: rgba(9, 12, 16, 0.8); border: 1px solid rgba(56, 189, 248, 0.3); padding: 6px 14px; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.4); display: inline-flex; justify-content: center; align-items: center; gap: 6px; backdrop-filter: blur(4px); }
         .date-badge { margin-top: 10px; }
         .time-box svg { stroke: var(--magic-main); width: 16px; height: 16px; }
-        .time-box.episodes { font-size: 13px; flex-direction: column; gap: 3px; align-items: center; text-align: center; background: rgba(22, 8, 36, 0.6); border-color: rgba(255, 215, 0, 0.15); padding: 6px 12px; margin-top: 0; }
+        .time-box.episodes { font-size: 13px; flex-direction: column; gap: 3px; align-items: center; text-align: center; background: rgba(9, 12, 16, 0.6); border-color: rgba(56, 189, 248, 0.15); padding: 6px 12px; margin-top: 0; }
 
-        .badge-status { font-size: 11px; font-weight: 900; text-align: center; display: inline-flex; justify-content: center; align-items: center; text-transform: uppercase; letter-spacing: 1px; font-family: var(--font-text); color: var(--bg-deep); border-radius: 12px; padding: 5px 14px; margin-bottom: 8px; background: var(--magic-main); box-shadow: 0 4px 12px rgba(255, 215, 0, 0.5); min-width: 85px; }
+        .badge-status { font-size: 11px; font-weight: 900; text-align: center; display: inline-flex; justify-content: center; align-items: center; text-transform: uppercase; letter-spacing: 1px; font-family: var(--font-text); color: var(--bg-deep); border-radius: 4px; padding: 5px 14px; margin-bottom: 8px; background: var(--magic-main); box-shadow: 0 4px 12px rgba(56, 189, 248, 0.4); min-width: 85px; }
 
         .crew-section { display: flex; align-items: center; margin-top: 15px; gap: 12px; }
         .avatar-container { position: relative; z-index: 1; transition: transform 0.3s ease; } 
-        .avatar { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; border: 2px solid var(--magic-dark); background-color: var(--bg-deep); box-shadow: 0 4px 10px rgba(0,0,0,0.6); transition: filter 0.3s, border-color 0.3s, box-shadow 0.3s, transform 0.3s; }
+        .avatar { width: 42px; height: 42px; border-radius: 4px; object-fit: cover; border: 2px solid var(--magic-dark); background-color: var(--bg-deep); box-shadow: 0 4px 10px rgba(0,0,0,0.6); transition: filter 0.3s, border-color 0.3s, box-shadow 0.3s, transform 0.3s; }
         .director-avatar { border: 2px solid var(--cute-pink); }
         .cast-group { display: flex; align-items: center; gap: 8px; }
-        tr.movie-row:hover .avatar { box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4); z-index: 10; border-color: var(--magic-main); transform: scale(1.1); }
-        tr.movie-row:hover .director-avatar { border-color: #ffb3c1; box-shadow: 0 6px 15px rgba(255, 143, 163, 0.5); }
+        tr.movie-row:hover .avatar { box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3); z-index: 10; border-color: var(--magic-main); transform: scale(1.1); }
+        tr.movie-row:hover .director-avatar { border-color: #fca5a5; box-shadow: 0 6px 15px rgba(251, 113, 133, 0.4); }
 
         /* ================= КАРТОЧНЫЙ ВИД (СЕТКА 6 В РЯД) ================= */
         .movies-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 15px; padding: 20px; }
         
         .card-view-item {
-            background: rgba(22, 8, 36, 0.85); border: 2px solid var(--magic-dark); border-radius: 20px;
+            background: rgba(22, 27, 34, 0.85); border: 2px solid var(--magic-dark); border-radius: 4px;
             display: flex; flex-direction: column; position: relative; cursor: pointer;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             box-shadow: 0 10px 30px rgba(0,0,0,0.7); overflow: hidden;
@@ -218,13 +214,10 @@
         }
         .card-view-item:hover {
             transform: translateY(-10px) scale(1.02); border-color: var(--magic-main);
-            box-shadow: 0 20px 45px rgba(0,0,0,0.8), 0 0 30px rgba(255, 215, 0, 0.4);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.8), 0 0 30px rgba(56, 189, 248, 0.3);
         }
         
-        .card-view-item::before {
-            content: ''; position: absolute; top: 4px; left: 4px; right: 4px; bottom: 4px;
-            border: 1px dashed rgba(255, 215, 0, 0.4); border-radius: 16px; pointer-events: none; z-index: 10;
-        }
+        /* Убрана пунктирная линия у плиток */
 
         .card-top { position: relative; width: 100%; padding-top: 135%; overflow: hidden; border-bottom: 2px solid var(--magic-dark); transition: border-color 0.3s; background: var(--bg-deep); }
         .card-view-item:hover .card-top { border-color: var(--magic-main); }
@@ -233,19 +226,19 @@
 
         .card-overlay {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(to bottom, rgba(22,8,36,0.1) 40%, rgba(22,8,36,0.6) 100%);
+            background: linear-gradient(to bottom, rgba(9,12,16,0.1) 40%, rgba(9,12,16,0.7) 100%);
             display: flex; flex-direction: column; justify-content: space-between; padding: 12px; z-index: 2;
             box-sizing: border-box;
         }
 
         .card-badges-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 4px; width: 100%; box-sizing: border-box; overflow: hidden; white-space: nowrap; }
-        .card-type-badge { background: var(--bg-velvet); border: 1px solid rgba(255, 215, 0, 0.6); padding: 4px 8px; border-radius: 10px; font-size: 9px; font-weight: 900; color: var(--magic-light); text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 4px 10px rgba(0,0,0,0.6); max-width: 50%; overflow: hidden; text-overflow: ellipsis; }
-        .card-status { background: var(--magic-main); color: var(--bg-deep); padding: 4px 8px; border-radius: 10px; font-size: 9px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 4px 12px rgba(255, 215, 0, 0.5); max-width: 50%; overflow: hidden; text-overflow: ellipsis; }
+        .card-type-badge { background: var(--bg-velvet); border: 1px solid rgba(56, 189, 248, 0.5); padding: 4px 8px; border-radius: 4px; font-size: 9px; font-weight: 900; color: var(--magic-light); text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 4px 10px rgba(0,0,0,0.6); max-width: 50%; overflow: hidden; text-overflow: ellipsis; }
+        .card-status { background: var(--magic-main); color: var(--bg-deep); padding: 4px 8px; border-radius: 4px; font-size: 9px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 4px 12px rgba(56, 189, 248, 0.4); max-width: 50%; overflow: hidden; text-overflow: ellipsis; }
         
         .card-bottom-badges { display: flex; flex-direction: column-reverse; align-items: flex-start; gap: 6px; position: absolute; bottom: 12px; left: 12px; z-index: 12;}
-        .card-mini-badge { font-size: 10px; font-weight: 900; background: rgba(40, 13, 61, 0.9); border: 1px solid rgba(255, 215, 0, 0.4); padding: 5px 10px; border-radius: 10px; display: flex; align-items: center; gap: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.6); backdrop-filter: blur(6px); }
+        .card-mini-badge { font-size: 10px; font-weight: 900; background: rgba(22, 27, 34, 0.9); border: 1px solid rgba(56, 189, 248, 0.4); padding: 5px 10px; border-radius: 4px; display: flex; align-items: center; gap: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.6); backdrop-filter: blur(6px); }
         .card-mini-badge.auction { color: var(--warm-star); border-color: var(--warm-star); }
-        .card-mini-badge.cried { color: #a0c4ff; border-color: #a0c4ff; }
+        .card-mini-badge.cried { color: #38bdf8; border-color: #38bdf8; }
         .card-mini-badge.rating { color: var(--magic-light); border-color: var(--magic-main); font-size: 11px; }
 
         .card-content { padding: 15px 10px; display: flex; flex-direction: column; align-items: center; text-align: center; z-index: 11; position: relative; flex-grow: 1; box-sizing: border-box; width: 100%; }
@@ -268,7 +261,7 @@
             flex-shrink: 0;
             transition: color 0.3s;
         }
-        .card-view-item:hover .card-title-text { color: var(--magic-light); text-shadow: 0 0 10px rgba(255, 215, 0, 0.6); }
+        .card-view-item:hover .card-title-text { color: var(--magic-light); text-shadow: 0 0 10px rgba(56, 189, 248, 0.5); }
         
         .card-bottom-info { margin-top: auto; width: 100%; }
         
@@ -276,42 +269,42 @@
         
         .grid-time-badge {
             display: inline-flex; align-items: center; justify-content: center; gap: 4px; 
-            background: rgba(255, 215, 0, 0.15); color: var(--magic-main); 
-            border: 1px solid rgba(255, 215, 0, 0.5); padding: 3px 10px; border-radius: 12px; 
+            background: rgba(56, 189, 248, 0.1); color: var(--magic-main); 
+            border: 1px solid rgba(56, 189, 248, 0.4); padding: 3px 10px; border-radius: 4px; 
             font-family: var(--font-text); font-size: 11px; font-weight: 900; 
             text-transform: uppercase;
         }
 
         .card-queue-box {
-            background: rgba(40, 13, 61, 0.9); padding: 8px 10px; border-radius: 14px; border: 1px solid rgba(255, 215, 0, 0.3);
+            background: rgba(22, 27, 34, 0.9); padding: 8px 10px; border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.3);
             display: flex; flex-direction: column; align-items: center; width: 100%; box-shadow: inset 0 0 15px rgba(0,0,0,0.6); box-sizing: border-box;
         }
         .card-queue-label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; font-weight: 900; margin-bottom: 5px; }
         
         .card-user-info-row { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; }
-        .card-user-avatar { width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--magic-main); object-fit: cover; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 12px; font-family: var(--font-title); font-weight: 900; background: var(--bg-deep); color: var(--magic-main); box-shadow: 0 2px 8px rgba(0,0,0,0.5); }
+        .card-user-avatar { width: 26px; height: 26px; border-radius: 4px; border: 2px solid var(--magic-main); object-fit: cover; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 12px; font-family: var(--font-title); font-weight: 900; background: var(--bg-deep); color: var(--magic-main); box-shadow: 0 2px 8px rgba(0,0,0,0.5); }
         .card-queue-name { font-size: 14px; font-weight: 800; color: var(--magic-light); white-space: nowrap; display: block; max-width: calc(100% - 34px); overflow: hidden; }
 
         /* ================= НОВЫЕ СТИЛИ ДЛЯ ПЛИТОК ================= */
         .banned-dot {
             position: absolute; right: 13px; bottom: 10px; width: 14px; height: 14px;
-            background-color: #ff4757; border-radius: 50%; z-index: 15;
-            box-shadow: 0 0 15px rgba(255, 71, 87, 0.9);
+            background-color: #ef4444; border-radius: 4px; z-index: 15;
+            box-shadow: 0 0 15px rgba(239, 68, 68, 0.9);
             border: 2px solid var(--bg-deep);
         }
         .card-copy-btn {
             position: absolute; right: 10px; bottom: 10px; z-index: 16;
-            background: rgba(22, 8, 36, 0.9); border: 1px solid rgba(255, 215, 0, 0.5); color: var(--magic-main);
-            cursor: pointer; padding: 8px; border-radius: 12px; display: flex; align-items: center; justify-content: center;
+            background: rgba(9, 12, 16, 0.9); border: 1px solid rgba(56, 189, 248, 0.5); color: var(--magic-main);
+            cursor: pointer; padding: 8px; border-radius: 4px; display: flex; align-items: center; justify-content: center;
             transition: all 0.3s; opacity: 0; transform: scale(0.8);
         }
         .card-view-item:hover .card-copy-btn { opacity: 1; transform: scale(1); }
-        .card-copy-btn:hover { background: var(--magic-main); color: var(--bg-deep); box-shadow: 0 0 15px rgba(255, 215, 0, 0.6); }
+        .card-copy-btn:hover { background: var(--magic-main); color: var(--bg-deep); box-shadow: 0 0 15px rgba(56, 189, 248, 0.5); }
         .card-copy-btn.shifted { bottom: 36px; }
         
         /* КНОПКА СМОТРЕТЬ ОНЛАЙН (ДЛЯ МОДАЛКИ) */
         .watch-online-btn {
-            background: linear-gradient(135deg, #ff4757, #ff758c);
+            background: linear-gradient(135deg, #ef4444, #f43f5e);
             color: #ffffff;
             padding: 6px 16px;
             font-size: 12px;
@@ -319,26 +312,26 @@
             text-transform: uppercase;
             letter-spacing: 1.5px;
             font-family: var(--font-text);
-            border-radius: 16px;
-            box-shadow: 0 4px 15px rgba(255, 71, 87, 0.5);
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             transition: all 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             cursor: pointer;
         }
         .watch-online-btn:hover {
             transform: translateY(-2px) scale(1.05);
-            box-shadow: 0 6px 20px rgba(255, 71, 87, 0.7);
+            box-shadow: 0 6px 20px rgba(239, 68, 68, 0.6);
             color: #ffffff;
         }
 
         /* ================= МОДАЛЬНОЕ ОКНО ================= */
         .modal-overlay {
             display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle at center, rgba(40, 13, 61, 0.95) 0%, rgba(22, 8, 36, 0.98) 100%);
+            background: radial-gradient(circle at center, rgba(22, 27, 34, 0.95) 0%, rgba(9, 12, 16, 0.98) 100%);
             backdrop-filter: blur(10px); z-index: 1000; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.4s ease;
         }
         .modal-overlay.active { display: flex; opacity: 1; }
@@ -351,42 +344,42 @@
 
         .modal-content {
             background: var(--bg-deep); width: 90%; max-width: 1000px; max-height: 85vh; overflow-y: auto; position: relative;
-            box-shadow: 0 0 60px rgba(0, 0, 0, 0.9), 0 0 40px rgba(255, 215, 0, 0.2); 
-            border: 2px solid var(--magic-main); padding: 6px; border-radius: 28px;
+            box-shadow: 0 0 60px rgba(0, 0, 0, 0.9), 0 0 40px rgba(56, 189, 248, 0.15); 
+            border: 2px solid var(--magic-main); padding: 6px; border-radius: 4px;
             transform: scale(0.95) translateY(20px); transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); scroll-behavior: smooth; 
         }
         .modal-overlay.active .modal-content { transform: scale(1) translateY(0); }
         .modal-inner { 
-            background: radial-gradient(circle at bottom right, #381552, #1a0b2e); 
-            border-radius: 22px; min-height: 100%; overflow: hidden; 
+            background: radial-gradient(circle at bottom right, #1f2937, #0f172a); 
+            border-radius: 4px; min-height: 100%; overflow: hidden; 
         }
 
         .close-btn {
             position: absolute; top: 20px; right: 25px; color: var(--text-main); cursor: pointer;
             z-index: 10; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; 
-            transition: all 0.3s; background: rgba(22, 8, 36, 0.7); border-radius: 50%; border: 1px solid rgba(255,215,0,0.3);
+            transition: all 0.3s; background: rgba(9, 12, 16, 0.7); border-radius: 4px; border: 1px solid rgba(56,189,248,0.3);
             backdrop-filter: blur(5px);
         }
-        .close-btn:hover { color: var(--magic-main); background: rgba(22, 8, 36, 0.95); transform: rotate(90deg) scale(1.1); box-shadow: 0 0 15px rgba(255, 215, 0, 0.5); }
+        .close-btn:hover { color: var(--magic-main); background: rgba(9, 12, 16, 0.95); transform: rotate(90deg) scale(1.1); box-shadow: 0 0 15px rgba(56, 189, 248, 0.4); }
 
-        .modal-hero { width: 100%; height: 350px; background-color: rgba(40, 13, 61, 1); background-size: cover; background-position: top center; position: relative; z-index: 1; box-shadow: 0 25px 60px 15px rgba(0, 0, 0, 0.8); transition: background-image 0.4s ease; }
+        .modal-hero { width: 100%; height: 350px; background-color: rgba(22, 27, 34, 1); background-size: cover; background-position: top center; position: relative; z-index: 1; box-shadow: 0 25px 60px 15px rgba(0, 0, 0, 0.8); transition: background-image 0.4s ease; }
         .modal-hero::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, var(--bg-velvet) 0%, transparent 100%); }
 
         .modal-body { padding: 0 45px 45px 45px; position: relative; margin-top: -130px; z-index: 2; display: flex; gap: 40px; }
-        .modal-poster { width: 220px; border-radius: 20px; box-shadow: 0 20px 45px rgba(0,0,0,0.7); border: 2px solid var(--magic-main); align-self: flex-start; }
+        .modal-poster { width: 220px; border-radius: 4px; box-shadow: 0 20px 45px rgba(0,0,0,0.7); border: 2px solid var(--magic-main); align-self: flex-start; }
         
-        .modal-info-main { flex: 1; background: rgba(40, 13, 61, 0.85); padding: 30px; border-radius: 24px; border: 1px solid rgba(255, 215, 0, 0.2); overflow: hidden; backdrop-filter: blur(10px); }
+        .modal-info-main { flex: 1; background: rgba(22, 27, 34, 0.85); padding: 30px; border-radius: 4px; border: 1px solid rgba(56, 189, 248, 0.2); overflow: hidden; backdrop-filter: blur(10px); }
 
         .modal-title-wrapper { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 15px; flex-wrap: nowrap; max-width: 100%; overflow: hidden; }
-        .modal-title { font-family: var(--font-title); font-size: 38px; font-weight: 900; margin: 0; color: #ffffff; text-shadow: 0 3px 6px rgba(0,0,0,0.7), 0 0 20px rgba(255, 215, 0, 0.4); flex-shrink: 1; min-width: 0; line-height: 1.2; }
+        .modal-title { font-family: var(--font-title); font-size: 38px; font-weight: 900; margin: 0; color: #ffffff; text-shadow: 0 3px 6px rgba(0,0,0,0.7), 0 0 20px rgba(56, 189, 248, 0.3); flex-shrink: 1; min-width: 0; line-height: 1.2; }
         .modal-title-extras { display: flex; align-items: center; gap: 12px; flex-shrink: 0; margin-top: 6px; }
         .modal-year { color: var(--magic-light); font-size: 26px; font-weight: 700; opacity: 0.9; } 
 
-        .modal-title-wrapper .copy-btn { opacity: 0.8; transform: scale(1); background: rgba(255, 215, 0, 0.2); color: var(--magic-main); padding: 8px; display: inline-flex; align-items: center; justify-content: center; transition: all 0.3s; border: none; cursor: pointer; border-radius: 12px; }
+        .modal-title-wrapper .copy-btn { opacity: 0.8; transform: scale(1); background: rgba(56, 189, 248, 0.15); color: var(--magic-main); padding: 8px; display: inline-flex; align-items: center; justify-content: center; transition: all 0.3s; border: none; cursor: pointer; border-radius: 4px; }
         .modal-title-wrapper:hover .copy-btn { opacity: 1; }
-        .modal-title-wrapper .copy-btn:hover { background: var(--magic-main); color: var(--bg-deep); box-shadow: 0 0 15px rgba(255, 215, 0, 0.6); transform: scale(1.1); }
+        .modal-title-wrapper .copy-btn:hover { background: var(--magic-main); color: var(--bg-deep); box-shadow: 0 0 15px rgba(56, 189, 248, 0.5); transform: scale(1.1); }
         
-        .modal-meta-wrapper { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; border-bottom: 1px dashed rgba(255, 215, 0, 0.3); padding-bottom: 18px; flex-wrap: wrap; }
+        .modal-meta-wrapper { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; border-bottom: 1px solid rgba(56, 189, 248, 0.2); padding-bottom: 18px; flex-wrap: wrap; }
         
         .modal-overview { color: var(--text-main); font-size: 17px; line-height: 1.8; margin-bottom: 35px; font-weight: 600; }
 
@@ -395,28 +388,28 @@
         .modal-crew-list { display: flex; gap: 18px; flex-wrap: wrap; }
         .crew-card { display: flex; flex-direction: column; align-items: center; width: 80px; text-align: center; transition: transform 0.3s; cursor: pointer; }
         .crew-card:hover { transform: translateY(-5px); }
-        .crew-card img { width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 2px solid var(--magic-dark); margin-bottom: 10px; box-shadow: 0 6px 15px rgba(0,0,0,0.4); }
-        .crew-card.director img { border-color: var(--cute-pink); box-shadow: 0 6px 15px rgba(255, 143, 163, 0.4); } 
+        .crew-card img { width: 70px; height: 70px; border-radius: 4px; object-fit: cover; border: 2px solid var(--magic-dark); margin-bottom: 10px; box-shadow: 0 6px 15px rgba(0,0,0,0.4); }
+        .crew-card.director img { border-color: var(--cute-pink); box-shadow: 0 6px 15px rgba(251, 113, 133, 0.3); } 
         .crew-card span { font-size: 14px; color: var(--magic-light); line-height: 1.3; font-weight: 700; }
 
         .modal-grid { 
             display: grid; 
             grid-template-columns: repeat(2, 1fr); 
-            background: rgba(22, 8, 36, 0.6); 
-            border-radius: 20px; 
-            border: 1px solid rgba(255, 215, 0, 0.2); 
+            background: rgba(9, 12, 16, 0.6); 
+            border-radius: 4px; 
+            border: 1px solid rgba(56, 189, 248, 0.2); 
             overflow: hidden; 
             box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
         }
         
         .modal-grid.has-tags { grid-template-columns: repeat(3, 1fr); }
 
-        .modal-grid-box { font-size: 15px; color: var(--magic-light); font-weight: 800; background: rgba(40, 13, 61, 0.9); border: 1px solid rgba(255, 215, 0, 0.3); padding: 10px 18px; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); display: inline-flex; justify-content: center; align-items: center; gap: 8px; width: fit-content; margin-top: 5px; }
+        .modal-grid-box { font-size: 15px; color: var(--magic-light); font-weight: 800; background: rgba(22, 27, 34, 0.9); border: 1px solid rgba(56, 189, 248, 0.3); padding: 10px 18px; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); display: inline-flex; justify-content: center; align-items: center; gap: 8px; width: fit-content; margin-top: 5px; }
         
         .grid-item { font-size: 15px; display: flex; flex-direction: column; gap: 5px; padding: 22px 28px; box-sizing: border-box; }
         
-        .grid-item.border-right { border-right: 1px dashed rgba(255, 215, 0, 0.3); }
-        .grid-item.border-bottom { border-bottom: 1px dashed rgba(255, 215, 0, 0.3); }
+        .grid-item.border-right { border-right: 1px solid rgba(56, 189, 248, 0.2); }
+        .grid-item.border-bottom { border-bottom: 1px solid rgba(56, 189, 248, 0.2); }
         
         .grid-item.full-width { grid-column: 1 / -1; } 
         .grid-label { color: var(--text-muted); font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; font-family: var(--font-text); font-weight: 900; margin-bottom: 5px; }
@@ -425,25 +418,25 @@
         .modal-requester-link { cursor: pointer; transition: transform 0.3s; display: inline-flex; align-items: center; gap: 12px; margin-bottom: 10px; }
         .modal-requester-link:hover { transform: translateX(5px) scale(1.02); }
         .modal-requester-link span.name-text { font-family: var(--font-text); font-size: 17px; color: var(--magic-main); transition: color 0.3s, text-shadow 0.3s; font-weight: 900; }
-        .modal-requester-link:hover span.name-text { color: #fff; text-shadow: 0 0 10px rgba(255, 215, 0, 0.8); }
+        .modal-requester-link:hover span.name-text { color: #fff; text-shadow: 0 0 10px rgba(56, 189, 248, 0.7); }
 
         .flex-row-responsive { display: flex; flex-direction: row; width: 100%; }
         .flex-col-half { flex: 1; padding: 22px 28px; display: flex; flex-direction: column; gap: 5px; box-sizing: border-box; }
-        .border-right-dashed { border-right: 1px dashed rgba(255, 215, 0, 0.3); }
+        .border-right-dashed { border-right: 1px solid rgba(56, 189, 248, 0.2); }
 
-        .trailer-container { width: 100%; aspect-ratio: 16/9; border: 2px solid var(--magic-main); border-radius: 16px; margin-top: 30px; box-shadow: 0 10px 35px rgba(0,0,0,0.7), 0 0 20px rgba(255, 215, 0, 0.2); overflow: hidden; position: relative;}
+        .trailer-container { width: 100%; aspect-ratio: 16/9; border: 2px solid var(--magic-main); border-radius: 4px; margin-top: 30px; box-shadow: 0 10px 35px rgba(0,0,0,0.7), 0 0 20px rgba(56, 189, 248, 0.1); overflow: hidden; position: relative;}
         .trailer-container iframe { width: 100%; height: 100%; border: none; }
 
         .footer-badge { display: flex; align-items: center; gap: 12px; justify-content: center; margin-top: 40px; padding-bottom: 25px; background: transparent; cursor: pointer; transition: all 0.3s ease; opacity: 0.8; }
         .footer-badge:hover { opacity: 1; transform: translateY(-3px); }
-        .footer-badge img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid var(--text-muted); transition: all 0.3s ease; }
-        .footer-badge:hover img { border-color: var(--magic-main); box-shadow: 0 0 15px rgba(255, 215, 0, 0.5); }
-        .footer-badge:hover .creator-name { color: var(--magic-light); text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); }
+        .footer-badge img { width: 40px; height: 40px; border-radius: 4px; object-fit: cover; border: 2px solid var(--text-muted); transition: all 0.3s ease; }
+        .footer-badge:hover img { border-color: var(--magic-main); box-shadow: 0 0 15px rgba(56, 189, 248, 0.4); }
+        .footer-badge:hover .creator-name { color: var(--magic-light); text-shadow: 0 0 10px rgba(56, 189, 248, 0.5); }
         .footer-badge .creator-label { display:block; font-size:11px; font-family: var(--font-text); color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 900; }
 
         ::-webkit-scrollbar { width: 10px; }
         ::-webkit-scrollbar-track { background: var(--bg-deep); }
-        ::-webkit-scrollbar-thumb { background: var(--magic-dark); border-radius: 5px; }
+        ::-webkit-scrollbar-thumb { background: var(--magic-dark); border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: var(--magic-main); }
 
         @media (max-width: 1024px) {
@@ -457,20 +450,20 @@
             
             .modal-grid { grid-template-columns: 1fr !important; }
             .grid-item.border-right { border-right: none !important; }
-            .grid-item { border-bottom: 1px dashed rgba(255, 215, 0, 0.3); }
-            #modalTagsColumn { grid-row: auto !important; grid-column: 1 / -1 !important; border-bottom: 1px dashed rgba(255, 215, 0, 0.3); padding-left: 28px !important;}
+            .grid-item { border-bottom: 1px solid rgba(56, 189, 248, 0.2); }
+            #modalTagsColumn { grid-row: auto !important; grid-column: 1 / -1 !important; border-bottom: 1px solid rgba(56, 189, 248, 0.2); padding-left: 28px !important;}
             .grid-item.full-width { border-bottom: none; }
             
             .flex-row-responsive { flex-direction: column; }
-            .flex-col-half.border-right-dashed { border-right: none; border-bottom: 1px dashed rgba(255, 215, 0, 0.3); }
+            .flex-col-half.border-right-dashed { border-right: none; border-bottom: 1px solid rgba(56, 189, 248, 0.2); }
 
             .header-top h1 { font-size: 34px; }
             .header-top h1::before, .header-top h1::after { display: none; }
         }
     
         .legendary-badge {
-            box-shadow: 0 4px 15px rgba(0,0,0,0.8), inset 0 0 20px #ffd700, 0 0 30px rgba(255, 215, 0, 0.7) !important;
-            border-color: #ffd700 !important; color: #fff !important; text-shadow: 0 0 10px #ffd700, 0 0 15px #fff !important; font-weight: 900 !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.8), inset 0 0 20px #38bdf8, 0 0 30px rgba(56, 189, 248, 0.6) !important;
+            border-color: #38bdf8 !important; color: #fff !important; text-shadow: 0 0 10px #38bdf8, 0 0 15px #fff !important; font-weight: 900 !important;
         }
     </style>
 </head>
@@ -622,9 +615,9 @@
     let viewMode = localStorage.getItem('siteViewMode') || 'grid'; 
     let isOnlineBtnVisible = true;
 
-    const fallbackImage = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='185' height='278' viewBox='0 0 185 278'%3E%3Crect width='185' height='278' fill='%23280d3d'/%3E%3Cpath d='M92.5 130c19.3 0 35-15.7 35-35s-15.7-35-35-35-35 15.7-35 35 15.7 35 35 35zm0 15c-23.3 0-70 11.7-70 35v25h140v-25c0-23.3-46.7-35-70-35z' fill='%23431a5c'/%3E%3C/svg%3E";
-    const fallbackPoster = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='750' viewBox='0 0 500 750'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23280d3d'/%3E%3Cstop offset='100%25' stop-color='%23160824'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='500' height='750' fill='url(%23bg)'/%3E%3Cg transform='translate(0, -20)'%3E%3Crect x='160' y='270' width='180' height='250' rx='15' fill='%23431a5c' stroke='%23ffd700' stroke-width='6'/%3E%3Crect x='195' y='270' width='110' height='250' fill='%23280d3d'/%3E%3Crect x='172' y='290' width='12' height='16' rx='3' fill='%23ffd700'/%3E%3Crect x='172' y='330' width='12' height='16' rx='3' fill='%23ffd700'/%3E%3Crect x='172' y='370' width='12' height='16' rx='3' fill='%23ffd700'/%3E%3Crect x='172' y='410' width='12' height='16' rx='3' fill='%23ffd700'/%3E%3Crect x='172' y='450' width='12' height='16' rx='3' fill='%23ffd700'/%3E%3Crect x='172' y='490' width='12' height='16' rx='3' fill='%23ffd700'/%3E%3Crect x='316' y='290' width='12' height='16' rx='3' fill='%23ffd700'/%3E%3Crect x='316' y='330' width='12' height='16' rx='3' fill='%23ffd700'/%3E%3Crect x='316' y='370' width='12' height='16' rx='3' fill='%23ffd700'/%3E%3Crect x='316' y='410' width='12' height='16' rx='3' fill='%23ffd700'/%3E%3Crect x='316' y='450' width='12' height='16' rx='3' fill='%23ffd700'/%3E%3Crect x='316' y='490' width='12' height='16' rx='3' fill='%23ffd700'/%3E%3Cpolygon points='230,365 230,425 275,395' fill='%23ff8fa3'/%3E%3Ccircle cx='345' cy='250' r='14' fill='%23ff8fa3'/%3E%3Ccircle cx='375' cy='280' r='10' fill='%23fce8a1'/%3E%3Ccircle cx='145' cy='520' r='12' fill='%23fce8a1'/%3E%3C/g%3E%3C/svg%3E";
-    const fallbackBackdrop = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1000' height='320' viewBox='0 0 1000 320'%3E%3Cdefs%3E%3ClinearGradient id='bgH' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23280d3d'/%3E%3Cstop offset='100%25' stop-color='%23160824'/%3E%3C/linearGradient%3E%3Cpattern id='f' width='100' height='160' patternUnits='userSpaceOnUse'%3E%3Crect x='20' y='20' width='60' height='25' rx='6' fill='%23ffd700' opacity='0.15'/%3E%3Crect x='20' y='115' width='60' height='25' rx='6' fill='%23ffd700' opacity='0.15'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='1000' height='320' fill='url(%23bgH)'/%3E%3Crect y='80' width='1000' height='160' fill='%23431a5c' opacity='0.4'/%3E%3Crect y='80' width='1000' height='160' fill='url(%23f)'/%3E%3Cg transform='translate(500, 160)'%3E%3Cpolygon points='-25,-35 -25,35 40,0' fill='%23ff8fa3' opacity='0.5'/%3E%3Ccircle cx='-60' cy='-50' r='12' fill='%23fce8a1' opacity='0.4'/%3E%3Ccircle cx='70' cy='50' r='18' fill='%23ffd700' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E";
+    const fallbackImage = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='185' height='278' viewBox='0 0 185 278'%3E%3Crect width='185' height='278' fill='%23090c10'/%3E%3Cpath d='M92.5 130c19.3 0 35-15.7 35-35s-15.7-35-35-35-35 15.7-35 35 15.7 35 35 35zm0 15c-23.3 0-70 11.7-70 35v25h140v-25c0-23.3-46.7-35-70-35z' fill='%23161b22'/%3E%3C/svg%3E";
+    const fallbackPoster = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='750' viewBox='0 0 500 750'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23161b22'/%3E%3Cstop offset='100%25' stop-color='%23090c10'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='500' height='750' fill='url(%23bg)'/%3E%3Cg transform='translate(0, -20)'%3E%3Crect x='160' y='270' width='180' height='250' rx='4' fill='%2321262d' stroke='%2338bdf8' stroke-width='6'/%3E%3Crect x='195' y='270' width='110' height='250' fill='%23090c10'/%3E%3Crect x='172' y='290' width='12' height='16' rx='2' fill='%2338bdf8'/%3E%3Crect x='172' y='330' width='12' height='16' rx='2' fill='%2338bdf8'/%3E%3Crect x='172' y='370' width='12' height='16' rx='2' fill='%2338bdf8'/%3E%3Crect x='172' y='410' width='12' height='16' rx='2' fill='%2338bdf8'/%3E%3Crect x='172' y='450' width='12' height='16' rx='2' fill='%2338bdf8'/%3E%3Crect x='172' y='490' width='12' height='16' rx='2' fill='%2338bdf8'/%3E%3Crect x='316' y='290' width='12' height='16' rx='2' fill='%2338bdf8'/%3E%3Crect x='316' y='330' width='12' height='16' rx='2' fill='%2338bdf8'/%3E%3Crect x='316' y='370' width='12' height='16' rx='2' fill='%2338bdf8'/%3E%3Crect x='316' y='410' width='12' height='16' rx='2' fill='%2338bdf8'/%3E%3Crect x='316' y='450' width='12' height='16' rx='2' fill='%2338bdf8'/%3E%3Crect x='316' y='490' width='12' height='16' rx='2' fill='%2338bdf8'/%3E%3Cpolygon points='230,365 230,425 275,395' fill='%23fb7185'/%3E%3Ccircle cx='345' cy='250' r='14' fill='%23fb7185'/%3E%3Ccircle cx='375' cy='280' r='10' fill='%23fbbf24'/%3E%3Ccircle cx='145' cy='520' r='12' fill='%23fbbf24'/%3E%3C/g%3E%3C/svg%3E";
+    const fallbackBackdrop = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1000' height='320' viewBox='0 0 1000 320'%3E%3Cdefs%3E%3ClinearGradient id='bgH' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23161b22'/%3E%3Cstop offset='100%25' stop-color='%23090c10'/%3E%3C/linearGradient%3E%3Cpattern id='f' width='100' height='160' patternUnits='userSpaceOnUse'%3E%3Crect x='20' y='20' width='60' height='25' rx='4' fill='%2338bdf8' opacity='0.15'/%3E%3Crect x='20' y='115' width='60' height='25' rx='4' fill='%2338bdf8' opacity='0.15'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='1000' height='320' fill='url(%23bgH)'/%3E%3Crect y='80' width='1000' height='160' fill='%2321262d' opacity='0.4'/%3E%3Crect y='80' width='1000' height='160' fill='url(%23f)'/%3E%3Cg transform='translate(500, 160)'%3E%3Cpolygon points='-25,-35 -25,35 40,0' fill='%23fb7185' opacity='0.5'/%3E%3Ccircle cx='-60' cy='-50' r='12' fill='%23fbbf24' opacity='0.4'/%3E%3Ccircle cx='70' cy='50' r='18' fill='%2338bdf8' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E";
 
     window.handlePosterError = function(img) {
         img.onerror = null;
@@ -639,7 +632,7 @@
     function updateToggleButton() {
         const btn = document.getElementById('viewToggleBtn');
         if (viewMode === 'list') {
-            btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg> Плиткой`;
+            btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="2"></rect><rect x="14" y="3" width="7" height="7" rx="2"></rect><rect x="14" y="14" width="7" height="7" rx="2"></rect><rect x="3" y="14" width="7" height="7" rx="2"></rect></svg> Плиткой`;
         } else {
             btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg> Списком`;
         }
@@ -721,7 +714,7 @@
         const filterEl = document.getElementById('userFilter'); if (!filterEl) return;
         filterEl.innerHTML = '<option value="all">Все заказчики</option>';
         const uniqueUsers = [...new Set(rawMoviesData.map(m => m.requestedBy))].sort((a, b) => a.localeCompare(b, undefined, {sensitivity: 'base'}));
-        uniqueUsers.forEach(u => { const opt = document.createElement('option'); opt.value = u.toLowerCase(); opt.textContent = `✨ ${u.replace('@', '').trim()}`; filterEl.appendChild(opt); });
+        uniqueUsers.forEach(u => { const opt = document.createElement('option'); opt.value = u.toLowerCase(); opt.textContent = `✦ ${u.replace('@', '').trim()}`; filterEl.appendChild(opt); });
     }
 
     function applyFilters() {
@@ -819,11 +812,11 @@
                 if ((prevMovie.status === 'Не смотрели' || prevMovie.isWatching === true) && movie.status === 'Смотрели') {
                     const dividerTr = document.createElement('tr');
                     dividerTr.innerHTML = `
-                        <td colspan="5" style="padding: 35px 15px; cursor: default; border-bottom: 1px dashed rgba(255, 215, 0, 0.2);">
+                        <td colspan="5" style="padding: 35px 15px; cursor: default; border-bottom: 1px solid rgba(56, 189, 248, 0.2);">
                             <div style="display: flex; align-items: center; justify-content: center;">
-                                <div style="flex-grow: 1; height: 3px; background: linear-gradient(to right, transparent, var(--magic-main)); opacity: 0.5;"></div>
-                                <span style="padding: 0 25px; font-family: var(--font-title); font-size: 20px; font-weight: 900; color: var(--magic-main); text-shadow: 0 0 15px rgba(255, 215, 0, 0.7); text-transform: uppercase; letter-spacing: 3px;">✨ Просмотрено ✨</span>
-                                <div style="flex-grow: 1; height: 3px; background: linear-gradient(to left, transparent, var(--magic-main)); opacity: 0.5;"></div>
+                                <div style="flex-grow: 1; height: 2px; background: linear-gradient(to right, transparent, var(--magic-main)); opacity: 0.5;"></div>
+                                <span style="padding: 0 25px; font-family: var(--font-title); font-size: 20px; font-weight: 900; color: var(--magic-main); text-shadow: 0 0 15px rgba(56, 189, 248, 0.7); text-transform: uppercase; letter-spacing: 3px;">✨ Просмотрено ✨</span>
+                                <div style="flex-grow: 1; height: 2px; background: linear-gradient(to left, transparent, var(--magic-main)); opacity: 0.5;"></div>
                             </div>
                         </td>
                     `;
@@ -839,11 +832,11 @@
             
             let statusText = '';
             if (movie.isWatching) {
-                statusText = `<span class="badge-status" style="background: #ffd700; color: #160824; box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5);">СМОТРИМ</span>`;
+                statusText = `<span class="badge-status" style="background: #38bdf8; color: #090c10; box-shadow: 0 4px 15px rgba(56, 189, 248, 0.5);">СМОТРИМ</span>`;
             } else if (isWatched) {
-                statusText = `<span class="badge-status">СМОТРЕЛИ</span>`;
+                statusText = `<span class="badge-status" style="background: rgba(22, 27, 34, 0.9); color: var(--magic-main); border: 1px solid rgba(56, 189, 248, 0.4);">СМОТРЕЛИ</span>`;
             } else {
-                statusText = `<span class="badge-status" style="background: rgba(142, 68, 173, 0.9); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.4); box-shadow: 0 4px 15px rgba(0,0,0,0.5);">В ОЧЕРЕДИ</span>`;
+                statusText = `<span class="badge-status" style="background: rgba(56, 189, 248, 0.2); color: var(--text-main); border: 1px solid rgba(56, 189, 248, 0.4); box-shadow: 0 4px 15px rgba(0,0,0,0.5);">В ОЧЕРЕДИ</span>`;
             }
             
             let watchedDetails = '';
@@ -885,18 +878,18 @@
             let directorHtml = '';
             if (movie.director && movie.director.name && movie.director.name !== "Нет данных") {
                 directorHtml = `<img src="${getSafePhoto(movie.director.photo)}" class="avatar director-avatar" alt="" title="Творец: ${escapeHTML(movie.director.name)}">`;
-                if(castHtml) directorHtml += '<div style="width: 2px; height: 30px; background: rgba(255,215,0,0.3); margin: 0 10px; border-radius: 2px;"></div>';
+                if(castHtml) directorHtml += '<div style="width: 2px; height: 30px; background: rgba(56, 189, 248, 0.3); margin: 0 10px; border-radius: 2px;"></div>';
             }
 
             let isSeries = movie.seasons && movie.episodes && String(movie.seasons) !== "0" && String(movie.episodes) !== "0";
-            let runtimeDisplay = `<div style="display: flex; flex-direction: column; align-items: center; gap: 8px;"><span class="badge-status" style="background: rgba(255,215,0,0.2); color: var(--magic-light); box-shadow: none;">${isSeries ? 'ЗА СЕРИЮ' : 'ВРЕМЯ'}</span><div class="time-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <span>${movie.runtime && movie.runtime !== 'Неизвестно' ? movie.runtime : 'Неизвестно'}</span></div>`;
+            let runtimeDisplay = `<div style="display: flex; flex-direction: column; align-items: center; gap: 8px;"><span class="badge-status" style="background: rgba(56, 189, 248, 0.1); color: var(--magic-light); box-shadow: none;">${isSeries ? 'ЗА СЕРИЮ' : 'ВРЕМЯ'}</span><div class="time-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <span>${movie.runtime && movie.runtime !== 'Неизвестно' ? movie.runtime : 'Неизвестно'}</span></div>`;
             if (isSeries) runtimeDisplay += `<div class="time-box episodes"><span>Сезонов: ${movie.seasons}</span><span>Серий: ${movie.episodes}</span></div>`;
             runtimeDisplay += `</div>`;
 
             const userColor = stringToColor(cleanNick);
             let avatarMarkup = movie.userAvatar && movie.userAvatar.startsWith('http') ? `<img src="${movie.userAvatar}" class="req-avatar" alt="">` : `<div class="req-avatar" style="background-color: ${userColor}; border-color: ${userColor};">${getInitials(cleanNick)}</div>`;
             
-            const auctionHTML = movie.isAuction ? `<div class="date-badge" style="margin-top: 8px; color: var(--warm-star); border-color: var(--warm-star); background: rgba(40, 13, 61, 0.9); font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 900;">✦ Аукцион ✦</div>` : '';
+            const auctionHTML = movie.isAuction ? `<div class="date-badge" style="margin-top: 8px; color: var(--warm-star); border-color: var(--warm-star); background: rgba(22, 27, 34, 0.9); font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 900;">✦ Аукцион ✦</div>` : '';
             const seasonHTML = movie.requestedSeason > 0 ? `<div class="date-badge" style="margin-top: 8px; color: #fff; border-color: var(--magic-main); font-size: 13px;">${movie.requestedSeason} сезон</div>` : '';
 
             tr.innerHTML = `
@@ -937,13 +930,13 @@
                     const dividerDiv = document.createElement('div');
                     dividerDiv.style.gridColumn = '1 / -1';
                     dividerDiv.innerHTML = `
-                        <div style="width: 100%; border-top: 3px dashed rgba(255, 215, 0, 0.4); margin: 20px 0;"></div>
+                        <div style="width: 100%; border-top: 2px solid rgba(56, 189, 248, 0.4); margin: 20px 0;"></div>
                         <div style="display: flex; align-items: center; justify-content: center; margin: 15px 0;">
-                            <div style="flex-grow: 1; height: 3px; background: linear-gradient(to right, transparent, var(--magic-main)); opacity: 0.5;"></div>
-                            <span style="padding: 0 25px; font-family: var(--font-title); font-size: 22px; font-weight: 900; color: var(--magic-main); text-shadow: 0 0 20px rgba(255, 215, 0, 0.8); text-transform: uppercase; letter-spacing: 3px;">✨ Просмотрено ✨</span>
-                            <div style="flex-grow: 1; height: 3px; background: linear-gradient(to left, transparent, var(--magic-main)); opacity: 0.5;"></div>
+                            <div style="flex-grow: 1; height: 2px; background: linear-gradient(to right, transparent, var(--magic-main)); opacity: 0.5;"></div>
+                            <span style="padding: 0 25px; font-family: var(--font-title); font-size: 22px; font-weight: 900; color: var(--magic-main); text-shadow: 0 0 20px rgba(56, 189, 248, 0.8); text-transform: uppercase; letter-spacing: 3px;">✨ Просмотрено ✨</span>
+                            <div style="flex-grow: 1; height: 2px; background: linear-gradient(to left, transparent, var(--magic-main)); opacity: 0.5;"></div>
                         </div>
-                        <div style="width: 100%; border-bottom: 3px dashed rgba(255, 215, 0, 0.4); margin: 20px 0 30px 0;"></div>
+                        <div style="width: 100%; border-bottom: 2px solid rgba(56, 189, 248, 0.4); margin: 20px 0 30px 0;"></div>
                     `;
                     gridContainer.appendChild(dividerDiv);
                 }
@@ -962,11 +955,11 @@
             
             let statusMarkup = '';
             if (movie.isWatching) {
-                statusMarkup = `<div class="card-status" style="background: #ffd700; color: #160824;">Смотрим</div>`;
+                statusMarkup = `<div class="card-status" style="background: #38bdf8; color: #090c10;">Смотрим</div>`;
             } else if (isWatched) {
-                statusMarkup = `<div class="card-status">Смотрели</div>`;
+                statusMarkup = `<div class="card-status" style="background: rgba(22, 27, 34, 0.9); color: var(--magic-main); border: 1px solid rgba(56, 189, 248, 0.4);">Смотрели</div>`;
             } else {
-                statusMarkup = `<div class="card-status" style="background: rgba(142, 68, 173, 0.9); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.4);">В очереди</div>`;
+                statusMarkup = `<div class="card-status" style="background: rgba(56, 189, 248, 0.2); color: var(--text-main); border: 1px solid rgba(56, 189, 248, 0.4);">В очереди</div>`;
             }
             
             let bottomBadges = '';
@@ -981,7 +974,7 @@
             }
             if (movie.isAuction) bottomBadges += `<div class="card-mini-badge auction">✦ АУК ✦</div>`;
             if (movie.isTheme) bottomBadges += `<div class="card-mini-badge" style="color: #fff; background: rgba(155, 89, 182, 0.9); border-color: #9b59b6;">🎨 Тем.Нед.</div>`;
-            if (isWatched && movie.cried) bottomBadges += `<div class="card-mini-badge cried"><svg width="14" height="14" viewBox="0 0 24 24" fill="#a0c4ff" stroke="#a0c4ff" stroke-width="1"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg> Слёзы</div>`;
+            if (isWatched && movie.cried) bottomBadges += `<div class="card-mini-badge cried"><svg width="14" height="14" viewBox="0 0 24 24" fill="#38bdf8" stroke="#38bdf8" stroke-width="1"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg> Слёзы</div>`;
             if (movie.isBanned) bottomBadges += `<div class="card-mini-badge" style="color: #fff; background: rgba(231, 76, 60, 0.9); border-color: #e74c3c;">🚫 БАН</div>`;
             if (movie.requestedSeason && movie.requestedSeason > 0) bottomBadges += `<div class="card-mini-badge" style="color: #fff; border-color: var(--magic-main);">СЕЗОН ${movie.requestedSeason}</div>`;
 
@@ -1021,9 +1014,9 @@
                         <h3 class="card-title-text resize-title">${cleanTitle}</h3>
                     </div>
                     
-                    <div style="width: 100%; border-bottom: 1px dashed rgba(255, 215, 0, 0.3); margin: 4px 0 6px 0;"></div>
+                    <div style="width: 100%; border-bottom: 1px solid rgba(56, 189, 248, 0.2); margin: 4px 0 6px 0;"></div>
                     <div style="font-family: var(--font-text); font-size: 11px; font-weight: 700; color: var(--text-muted); width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: center;" title="${movieGenres}">${movieGenres}</div>
-                    <div style="width: 100%; border-bottom: 1px dashed rgba(255, 215, 0, 0.3); margin: 6px 0 10px 0;"></div>
+                    <div style="width: 100%; border-bottom: 1px solid rgba(56, 189, 248, 0.2); margin: 6px 0 10px 0;"></div>
 
                     <div style="margin-top: auto; width: 100%;">
                         <div class="card-date-meta">
@@ -1174,11 +1167,11 @@
         
         let statusTextHTML = '';
         if (movie.isWatching) {
-            statusTextHTML = `<span class="badge-status" style="background: #ffd700; color: #160824; box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5); margin:0; padding:8px 16px; font-size: 14px;">СМОТРИМ</span>`;
+            statusTextHTML = `<span class="badge-status" style="background: #38bdf8; color: #090c10; box-shadow: 0 4px 15px rgba(56, 189, 248, 0.5); margin:0; padding:8px 16px; font-size: 14px;">СМОТРИМ</span>`;
         } else if (isWatched) {
-            statusTextHTML = `<span class="badge-status" style="margin:0; padding:8px 16px; font-size: 14px;">СМОТРЕЛИ</span>`;
+            statusTextHTML = `<span class="badge-status" style="background: rgba(22, 27, 34, 0.9); color: var(--magic-main); border: 1px solid rgba(56, 189, 248, 0.4); margin:0; padding:8px 16px; font-size: 14px;">СМОТРЕЛИ</span>`;
         } else {
-            statusTextHTML = `<span class="badge-status" style="background: rgba(142, 68, 173, 0.9); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.4); box-shadow: 0 4px 15px rgba(0,0,0,0.5); margin:0; padding:8px 16px; font-size: 14px;">В ОЧЕРЕДИ</span>`;
+            statusTextHTML = `<span class="badge-status" style="background: rgba(56, 189, 248, 0.2); color: var(--text-main); border: 1px solid rgba(56, 189, 248, 0.4); box-shadow: 0 4px 15px rgba(0,0,0,0.5); margin:0; padding:8px 16px; font-size: 14px;">В ОЧЕРЕДИ</span>`;
         }
         document.getElementById('modalStatusLabel').innerHTML = statusTextHTML;
 
@@ -1187,11 +1180,11 @@
         const dateWatchedEl = document.getElementById('modalDateWatched');
         let watchedHtml = '';
         if (movie.isWatching) {
-            watchedHtml = `<div class="modal-grid-box" style="margin-top: 0; background: rgba(40, 13, 61, 0.9); border-color: rgba(255, 215, 0, 0.3); color: #ffd700;">В процессе магии...</div>`;
+            watchedHtml = `<div class="modal-grid-box" style="margin-top: 0; background: rgba(22, 27, 34, 0.9); border-color: rgba(56, 189, 248, 0.3); color: #38bdf8;">В процессе магии...</div>`;
         } else if (isWatched && movie.dateWatched) {
             watchedHtml = `<div class="modal-grid-box" style="margin-top: 0;">${movie.dateWatched.split(' ')[0]}</div>`;
         } else { 
-            watchedHtml = `<div class="modal-grid-box" style="background: rgba(255,215,0,0.1); border-color: transparent;">Ждет своей очереди</div>`; 
+            watchedHtml = `<div class="modal-grid-box" style="background: rgba(56,189,248,0.1); border-color: transparent;">Ждет своей очереди</div>`; 
         }
         dateWatchedEl.innerHTML = `<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 8px;">${watchedHtml}</div>`;
         
@@ -1212,7 +1205,7 @@
         }
         if (isWatched && movie.cried) tagsHtml += `<div class="modal-grid-box" style="margin-top: 0;"><svg width="20" height="20" viewBox="0 0 24 24" fill="var(--magic-light)" stroke="var(--magic-light)" stroke-width="1" style="margin-right: 4px;"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg> Слёзы</div>`;
         if (movie.isTheme) tagsHtml += `<div class="modal-grid-box" style="margin-top: 0; color: #fff; border-color: #9b59b6; background: rgba(155, 89, 182, 0.3);">🎨 Тем. неделя</div>`;
-        if (movie.isBanned) tagsHtml += `<div class="modal-grid-box" style="margin-top: 0; color: #fff; border-color: #e74c3c; background: rgba(231, 76, 60, 0.3); font-size: 14px;">🚫 Получили БАН</div>`;
+        if (movie.isBanned) tagsHtml += `<div class="modal-grid-box" style="margin-top: 0; color: #fff; border-color: #ef4444; background: rgba(239, 68, 68, 0.3); font-size: 14px;">🚫 Получили БАН</div>`;
         
         const tagsCol = document.getElementById('modalTagsColumn');
         if (tagsHtml === '') {
@@ -1233,7 +1226,7 @@
         
         let row3Html = '';
         if (isSeriesModal) {
-            let seasonsValue = `<div class="modal-grid-box" style="margin-top: 4px; font-size: 14px; color: var(--magic-light); border-color: rgba(255, 215, 0, 0.4);">📺 Сезонов: ${movie.seasons} | Серий: ${movie.episodes}</div>`;
+            let seasonsValue = `<div class="modal-grid-box" style="margin-top: 4px; font-size: 14px; color: var(--magic-light); border-color: rgba(56, 189, 248, 0.4);">📺 Сезонов: ${movie.seasons} | Серий: ${movie.episodes}</div>`;
             row3Html = `
                 <div class="flex-row-responsive">
                     <div class="flex-col-half border-right-dashed">
@@ -1258,10 +1251,10 @@
 
         const cleanNickModal = movie.requestedBy.replace('@', '').trim();
         const userColorModal = stringToColor(cleanNickModal);
-        let avatarMarkupModal = movie.userAvatar && movie.userAvatar.startsWith('http') ? `<img src="${movie.userAvatar}" class="req-avatar" style="width:36px; height:36px; border-width:2px; border-radius:50%; object-fit:cover; margin-right:12px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);" alt="">` : `<div class="req-avatar" style="width:36px; height:36px; font-size:15px; border-width:2px; background-color: ${userColorModal}; border-color: ${userColorModal}; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-right:12px; color:var(--bg-deep); font-weight:900; box-shadow: 0 4px 10px rgba(0,0,0,0.5);">${getInitials(cleanNickModal)}</div>`;
+        let avatarMarkupModal = movie.userAvatar && movie.userAvatar.startsWith('http') ? `<img src="${movie.userAvatar}" class="req-avatar" style="width:36px; height:36px; border-width:2px; border-radius:4px; object-fit:cover; margin-right:12px; box-shadow: 0 4px 10px rgba(0,0,0,0.5);" alt="">` : `<div class="req-avatar" style="width:36px; height:36px; font-size:15px; border-width:2px; background-color: ${userColorModal}; border-color: ${userColorModal}; border-radius:4px; display:flex; align-items:center; justify-content:center; margin-right:12px; color:var(--bg-deep); font-weight:900; box-shadow: 0 4px 10px rgba(0,0,0,0.5);">${getInitials(cleanNickModal)}</div>`;
         
         let reqInner = `<div class="modal-requester-link hover-active" onclick="window.open('https://twitch.tv/${cleanNickModal}', '_blank')" style="display:flex; align-items:center; margin-bottom: 10px;">${avatarMarkupModal}<span class="name-text">${cleanNickModal}</span></div>`;
-        if (movie.isAuction) reqInner += `<div class="modal-grid-box" style="margin-top: 0; margin-bottom: 8px; color: var(--warm-star); border-color: var(--warm-star); background: rgba(40, 13, 61, 0.9); font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 900;">✦ Аукцион ✦</div>`;
+        if (movie.isAuction) reqInner += `<div class="modal-grid-box" style="margin-top: 0; margin-bottom: 8px; color: var(--warm-star); border-color: var(--warm-star); background: rgba(22, 27, 34, 0.9); font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 900;">✦ Аукцион ✦</div>`;
         if (movie.requestedSeason > 0) reqInner += `<div class="modal-grid-box" style="margin-top: 0; color: #fff; border-color: var(--magic-main); font-size: 14px;">${movie.requestedSeason} сезон</div>`;
         
         document.getElementById('modalRequesterBlock').innerHTML = reqInner;
