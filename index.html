@@ -19,41 +19,24 @@
             --warm-star: #fbbf24;       
             --cute-pink: #f43f5e;       
             
-            --text-main: #ffffff;       
-            --text-muted: #ffffff;      
+            --text-main: #fff1f2;       
+            --text-muted: #fda4af;      
             
             --font-title: 'Comfortaa', cursive;
             --font-text: 'Nunito', sans-serif;
         }
 
-        body {
-            /* Базовый цвет фона (в самом низу) */
-            background-color: #2b131f; 
-            
-            /* Слои со звездами разных размеров и яркости + основной градиент-свечение */
-            background-image: 
-                radial-gradient(2px 2px at 15% 25%, rgba(255,255,255,1) 100%, transparent),
-                radial-gradient(1.5px 1.5px at 45% 15%, rgba(255,255,255,0.7) 100%, transparent),
-                radial-gradient(2.5px 2.5px at 75% 35%, rgba(255,255,255,0.9) 100%, transparent),
-                radial-gradient(1px 1px at 85% 10%, rgba(255,255,255,0.4) 100%, transparent),
-                radial-gradient(3px 3px at 10% 65%, rgba(255,255,255,0.8) 100%, transparent),
-                radial-gradient(1.5px 1.5px at 35% 85%, rgba(255,255,255,0.5) 100%, transparent),
-                radial-gradient(2px 2px at 65% 75%, rgba(255,255,255,1) 100%, transparent),
-                radial-gradient(1px 1px at 90% 85%, rgba(255,255,255,0.6) 100%, transparent),
-                radial-gradient(2px 2px at 55% 50%, rgba(255,255,255,0.3) 100%, transparent),
-                radial-gradient(1.5px 1.5px at 25% 95%, rgba(255,255,255,0.7) 100%, transparent),
-                radial-gradient(2.5px 2.5px at 80% 95%, rgba(255,255,255,0.9) 100%, transparent),
-                radial-gradient(circle at 50% 0%, #7d3958 0%, transparent 80%);
-            
+        html {
+            /* Перенесли фон сюда, чтобы Canvas со звездами лежал под контентом, но над фоном */
+            background: radial-gradient(circle at 50% 0%, #7d3958 0%, #2b131f 80%);
             background-attachment: fixed;
-            
-            /* Разные размеры для слоев создают хаотичное (не сетчатое) расположение звезд */
-            background-size: 
-                300px 300px, 450px 450px, 250px 250px, 350px 350px, 
-                500px 500px, 200px 200px, 400px 400px, 280px 280px, 
-                320px 320px, 380px 380px, 420px 420px, 100% 100%;
-                
-            color: var(--text-main);
+            min-height: 100vh;
+        }
+
+        body {
+            /* Сделано значительно светлее и контрастнее */
+            background: transparent;
+            color: #ffffff;
             font-family: var(--font-text);
             margin: 0;
             padding: 50px 20px;
@@ -63,12 +46,12 @@
 
         .main-wrapper { display: flex; justify-content: center; align-items: stretch; width: 100%; }
         
-        /* Позиционирование левой и правой девушки сделано абсолютно раздельным */
         .girl-col { width: 0; position: relative; z-index: 999; pointer-events: none; }
         .sticky-box { position: sticky; top: 50vh; width: 0; height: 0; overflow: visible; }
-        .girl-img { position: absolute; }
-        .left-img { height: 650px; top: -325px; right: -252px; filter: drop-shadow(0 8px 25px rgba(0,0,0,0.6)); }
-        .right-img { height: 650px; top: -325px; left: -297px; filter: drop-shadow(0 8px 25px rgba(0,0,0,0.6)); }
+        
+        /* Картинки девушек теперь полностью независимы */
+        .left-img { position: absolute; height: 608px; top: -325px; right: -234px; filter: drop-shadow(0 8px 25px rgba(0,0,0,0.6)); }
+        .right-img { position: absolute; height: 650px; top: -325px; left: -315px; filter: drop-shadow(0 8px 25px rgba(0,0,0,0.6)); }
 
         @media (max-width: 1550px) { .girl-col { display: none; } }
 
@@ -98,7 +81,7 @@
         .header::after {
             content: ''; position: absolute; bottom: -14px; left: 50%; transform: translateX(-50%);
             width: 28px; height: 28px; background-color: var(--bg-deep);
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M12 0l2.88 7.12L22 10l-7.12 2.88L12 20l-2.88-7.12L2 10l7.12-2.88L12 0z'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fb7185'%3E%3Cpath d='M12 0l2.88 7.12L22 10l-7.12 2.88L12 20l-2.88-7.12L2 10l7.12-2.88L12 0z'/%3E%3C/svg%3E");
             background-repeat: no-repeat; background-position: center; background-size: 16px 16px;
             border-radius: 4px; border: 1px solid rgba(251, 113, 133, 0.4); box-shadow: 0 0 10px rgba(251, 113, 133, 0.3);
         }
@@ -118,7 +101,7 @@
         
         .header-top h1::before, .header-top h1::after {
             content: ''; display: inline-block; width: 22px; height: 22px; vertical-align: middle; margin: 0 15px;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M12 0l2.88 7.12L22 10l-7.12 2.88L12 20l-2.88-7.12L2 10l7.12-2.88L12 0z'/%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fb7185'%3E%3Cpath d='M12 0l2.88 7.12L22 10l-7.12 2.88L12 20l-2.88-7.12L2 10l7.12-2.88L12 0z'/%3E%3C/svg%3E");
             background-repeat: no-repeat; background-position: center; background-size: 20px 20px;
             filter: drop-shadow(0 0 8px rgba(251, 113, 133, 0.6)); 
         }
@@ -136,12 +119,12 @@
             background: rgba(38, 17, 26, 0.9); padding: 6px 12px 6px 6px; cursor: pointer;
             transition: all 0.3s ease; opacity: 0.95; border-radius: 4px; border: 1px solid rgba(251, 113, 133, 0.4);
         }
-        .creator-badge:hover { opacity: 1; background: rgba(251, 113, 133, 0.15); border-color: #ffffff; box-shadow: 0 0 20px rgba(251, 113, 133, 0.4); transform: translateY(-2px); }
-        .creator-badge img { width: 38px; height: 38px; border-radius: 4px; object-fit: cover; border: 2px solid #ffffff; transition: all 0.3s ease; }
+        .creator-badge:hover { opacity: 1; background: rgba(251, 113, 133, 0.15); border-color: var(--magic-main); box-shadow: 0 0 20px rgba(251, 113, 133, 0.4); transform: translateY(-2px); }
+        .creator-badge img { width: 38px; height: 38px; border-radius: 4px; object-fit: cover; border: 2px solid var(--magic-main); transition: all 0.3s ease; }
         .creator-info { display: flex; flex-direction: column; text-align: left; transition: all 0.3s ease; }
         .creator-label { font-size: 10px; color: #ffffff; text-transform: uppercase; letter-spacing: 1px; font-family: var(--font-title); display: none; }
         .creator-name { font-size: 16px; font-weight: 700; color: #ffffff; font-family: var(--font-text); transition: text-shadow 0.3s ease;}
-        .creator-badge:hover .creator-name { text-shadow: 0 0 10px rgba(251, 113, 133, 0.7); color: #ffffff; }
+        .creator-badge:hover .creator-name { text-shadow: 0 0 10px rgba(255, 255, 255, 0.7); color: #ffffff; }
 
         .controls-panel { display: flex; gap: 15px; flex-wrap: wrap; align-items: center; justify-content: center; margin-top: 5px; }
         
@@ -152,8 +135,8 @@
             box-sizing: border-box; height: 42px; 
         }
         .search-box { width: 220px; }
-        .search-box::placeholder { color: #ffffff; opacity: 0.7; }
-        .search-box:focus, .sort-select:focus { border-color: #ffffff; color: #ffffff; box-shadow: 0 0 15px rgba(251, 113, 133, 0.2); }
+        .search-box::placeholder { color: rgba(255, 255, 255, 0.7); }
+        .search-box:focus, .sort-select:focus { border-color: #ffffff; color: #fff; box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); }
         
         .sort-select { 
             cursor: pointer; appearance: none; padding-right: 35px; 
@@ -163,16 +146,16 @@
         .sort-select option { background: var(--bg-deep); color: #ffffff; }
 
         .view-toggle-btn {
-            background: rgba(251, 113, 133, 0.1); border: 1px solid rgba(251, 113, 133, 0.6); border-radius: 4px;
+            background: rgba(251, 113, 133, 0.1); border: 1px solid var(--magic-main); border-radius: 4px;
             padding: 0 20px; color: #ffffff; font-size: 15px; font-family: var(--font-title); font-weight: 700;
             cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 8px;
             box-sizing: border-box; height: 42px;
         }
-        .view-toggle-btn:hover { background: #ffffff; color: var(--bg-deep); box-shadow: 0 0 20px rgba(251, 113, 133, 0.3); transform: translateY(-2px); }
+        .view-toggle-btn:hover { background: #ffffff; color: var(--bg-deep); box-shadow: 0 0 20px rgba(255, 255, 255, 0.4); transform: translateY(-2px); }
 
         /* ================= ТАБЛИЧНЫЙ ВИД (СПИСОК) ================= */
         table { width: 100%; border-collapse: separate; border-spacing: 0; text-align: left; table-layout: fixed; }
-        th { text-align: center; color: #ffffff; font-weight: 700; font-size: 14px; text-transform: uppercase; padding: 25px 12px 15px; border-bottom: 2px solid rgba(251, 113, 133, 0.3); font-family: var(--font-title); letter-spacing: 2px; text-shadow: 0 0 10px rgba(251, 113, 133, 0.2); }
+        th { text-align: center; color: #ffffff; font-weight: 700; font-size: 14px; text-transform: uppercase; padding: 25px 12px 15px; border-bottom: 2px solid rgba(251, 113, 133, 0.3); font-family: var(--font-title); letter-spacing: 2px; text-shadow: 0 0 10px rgba(255, 255, 255, 0.3); }
         td { padding: 20px 15px; vertical-align: top; border-bottom: 1px solid rgba(251, 113, 133, 0.15); }
         tr:last-child td { border-bottom: none; }
         td:nth-child(1), td:nth-child(3), td:nth-child(4), td:nth-child(5) { text-align: center; }
@@ -184,28 +167,28 @@
         
         .poster-wrapper { width: 140px; height: 210px; overflow: hidden; margin: 0 auto; box-shadow: 0 8px 25px rgba(0,0,0,0.6); border: 2px solid rgba(251, 113, 133, 0.5); border-radius: 4px; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); background: var(--bg-deep); }
         .poster-wrapper img { width: 100%; height: 100%; object-fit: cover; border-radius: 2px; } 
-        tr.movie-row:has(.poster-wrapper:hover) .poster-wrapper { box-shadow: 0 15px 35px rgba(251, 113, 133, 0.3); border-color: #ffffff; transform: scale(1.05); }
+        tr.movie-row:has(.poster-wrapper:hover) .poster-wrapper { box-shadow: 0 15px 35px rgba(251, 113, 133, 0.3); border-color: var(--magic-main); transform: scale(1.05); }
         
         .movie-info { display: flex; flex-direction: column; gap: 8px; padding-left: 10px; overflow: hidden; }
         .movie-header { display: flex; align-items: flex-start; justify-content: flex-start; gap: 12px; width: 100%; margin-bottom: 5px; } 
         .movie-title { font-size: 26px; font-weight: 900; color: #ffffff; font-family: var(--font-title); text-shadow: 0 2px 8px rgba(0,0,0,0.8), 0 0 10px rgba(251, 113, 133, 0.2); flex: 0 1 auto; min-width: 0; line-height: 1.2; transition: text-shadow 0.3s; }
-        tr.movie-row:hover .movie-title { text-shadow: 0 2px 8px rgba(0,0,0,0.8), 0 0 15px rgba(251, 113, 133, 0.5); color: #ffffff; }
+        tr.movie-row:hover .movie-title { text-shadow: 0 2px 8px rgba(0,0,0,0.8), 0 0 15px rgba(255, 255, 255, 0.5); color: #ffffff; }
         .movie-meta-box { display: flex; align-items: center; gap: 10px; flex-shrink: 0; margin-top: 1px; }
         .movie-year { color: #ffffff; font-size: 18px; font-weight: 700; opacity: 0.9; white-space: nowrap; flex-shrink: 0; } 
         
         .copy-btn { background: rgba(251, 113, 133, 0.1); border: 1px solid transparent; color: #ffffff; cursor: pointer; padding: 6px; border-radius: 4px; display: flex; align-items: center; justify-content: center; transition: all 0.3s; opacity: 0; transform: scale(0.8); position: relative; top: 2px; flex-shrink: 0; }
         tr.movie-row:hover .copy-btn { opacity: 1; transform: scale(1); }
-        .copy-btn:hover { background: #ffffff; color: var(--bg-deep); box-shadow: 0 0 15px rgba(251, 113, 133, 0.4); } 
+        .copy-btn:hover { background: #ffffff; color: var(--bg-deep); box-shadow: 0 0 15px rgba(255, 255, 255, 0.4); } 
 
         .badges-container { display: flex; align-items: center; gap: 8px; margin: 2px 0; flex-wrap: wrap; }
-        .content-type-badge { background: var(--magic-main); color: var(--bg-deep); padding: 4px 12px; font-size: 11px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; font-family: var(--font-text); border-radius: 4px; box-shadow: 0 3px 10px rgba(251, 113, 133, 0.3); }
+        .content-type-badge { background: #ffffff; color: var(--bg-deep); padding: 4px 12px; font-size: 11px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; font-family: var(--font-text); border-radius: 4px; box-shadow: 0 3px 10px rgba(251, 113, 133, 0.3); }
         .outline-badge, .tmdb-badge { border: 1px solid rgba(251, 113, 133, 0.5); color: #ffffff; padding: 4px 12px; font-size: 11px; font-weight: 700; background: rgba(251, 113, 133, 0.05); border-radius: 4px; font-family: var(--font-text); letter-spacing: 0.5px; backdrop-filter: blur(4px); }
 
-        /* Исключение из "белого везде": оставляем специфичные цвета для жанров и студий в режиме списка */
+        /* Исключение из правил: Жанры и Студии в режиме СПИСКА сохраняют свои оригинальные цвета! */
         .movie-genres { font-size: 14px; color: var(--magic-light); font-weight: 600; opacity: 0.9; }
         .movie-studios-list { font-size: 12px; color: var(--warm-star); font-weight: 700; letter-spacing: 0.5px; margin-top: 2px; }
 
-        .movie-tagline { font-size: 14px; color: #ffffff; font-style: italic; border-left: 3px solid var(--cute-pink); padding-left: 10px; background: linear-gradient(to right, rgba(244, 63, 94, 0.05), transparent); border-radius: 0 4px 4px 0; }
+        .movie-tagline { font-size: 14px; color: #ffffff; font-style: italic; border-left: 3px solid #ffffff; padding-left: 10px; background: linear-gradient(to right, rgba(255, 255, 255, 0.05), transparent); border-radius: 0 4px 4px 0; }
         
         .movie-overview-wrapper { margin-top: 8px; max-height: 48px; overflow: hidden; transition: max-height 0.5s ease; }
         .movie-overview-text { font-size: 15px; line-height: 1.6; color: #ffffff; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
@@ -214,8 +197,8 @@
 
         .requester-badge { display: flex; flex-direction: column; align-items: center; gap: 8px; cursor: pointer; transition: transform 0.3s; margin: 0 auto; }
         .requester-badge:hover { transform: scale(1.05); }
-        .requester-badge:hover .req-avatar { border-color: #ffffff; box-shadow: 0 0 20px rgba(251, 113, 133, 0.4); }
-        .requester-badge:hover .req-name { color: #ffffff; text-shadow: 0 0 10px rgba(251, 113, 133, 0.6); }
+        .requester-badge:hover .req-avatar { border-color: #ffffff; box-shadow: 0 0 20px rgba(255, 255, 255, 0.4); }
+        .requester-badge:hover .req-name { color: #fff; text-shadow: 0 0 10px rgba(255, 255, 255, 0.6); }
         .req-avatar { width: 48px; height: 48px; border-radius: 4px; display: flex; align-items: center; justify-content: center; font-family: var(--font-title); font-size: 20px; color: var(--bg-deep); font-weight: 900; box-shadow: 0 6px 15px rgba(0,0,0,0.5); object-fit: cover; border: 2px solid var(--magic-main); transition: all 0.3s; background: #ffffff; }
         .req-name { font-family: var(--font-text); font-size: 15px; font-weight: 800; color: #ffffff; transition: all 0.3s; }
         
@@ -232,7 +215,7 @@
         .director-avatar { border: 2px solid var(--cute-pink); }
         .cast-group { display: flex; align-items: center; gap: 8px; }
         tr.movie-row:hover .avatar { box-shadow: 0 4px 15px rgba(251, 113, 133, 0.3); z-index: 10; border-color: #ffffff; transform: scale(1.1); }
-        tr.movie-row:hover .director-avatar { border-color: #ffffff; box-shadow: 0 6px 15px rgba(251, 113, 133, 0.4); }
+        tr.movie-row:hover .director-avatar { border-color: #ffffff; box-shadow: 0 6px 15px rgba(255, 255, 255, 0.4); }
 
         /* ================= КАРТОЧНЫЙ ВИД (СЕТКА 6 В РЯД) ================= */
         .movies-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 15px; padding: 20px; }
@@ -246,7 +229,7 @@
         }
         .card-view-item:hover {
             transform: translateY(-10px) scale(1.02); border-color: #ffffff;
-            box-shadow: 0 20px 45px rgba(0,0,0,0.8), 0 0 30px rgba(251, 113, 133, 0.3);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.8), 0 0 30px rgba(255, 255, 255, 0.3);
         }
 
         .card-top { position: relative; width: 100%; padding-top: 135%; overflow: hidden; border-bottom: 2px solid var(--magic-dark); transition: border-color 0.3s; background: var(--bg-deep); }
@@ -263,7 +246,7 @@
 
         .card-badges-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 4px; width: 100%; box-sizing: border-box; overflow: hidden; white-space: nowrap; }
         .card-type-badge { background: var(--bg-velvet); border: 1px solid rgba(251, 113, 133, 0.5); padding: 4px 8px; border-radius: 4px; font-size: 9px; font-weight: 900; color: #ffffff; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 4px 10px rgba(0,0,0,0.6); max-width: 50%; overflow: hidden; text-overflow: ellipsis; }
-        .card-status { background: #ffffff; color: var(--bg-deep); padding: 4px 8px; border-radius: 4px; font-size: 9px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 4px 12px rgba(251, 113, 133, 0.4); max-width: 50%; overflow: hidden; text-overflow: ellipsis; }
+        .card-status { background: #ffffff; color: var(--bg-deep); padding: 4px 8px; border-radius: 4px; font-size: 9px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 4px 12px rgba(255, 255, 255, 0.4); max-width: 50%; overflow: hidden; text-overflow: ellipsis; }
         
         .card-bottom-badges { display: flex; flex-direction: column-reverse; align-items: flex-start; gap: 6px; position: absolute; bottom: 12px; left: 12px; z-index: 12;}
         .card-mini-badge { font-size: 10px; font-weight: 900; background: rgba(38, 17, 26, 0.9); border: 1px solid rgba(251, 113, 133, 0.4); padding: 5px 10px; border-radius: 4px; display: flex; align-items: center; gap: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.6); backdrop-filter: blur(6px); color: #ffffff; }
@@ -291,7 +274,7 @@
             flex-shrink: 0;
             transition: color 0.3s;
         }
-        .card-view-item:hover .card-title-text { color: #ffffff; text-shadow: 0 0 10px rgba(251, 113, 133, 0.5); }
+        .card-view-item:hover .card-title-text { color: #ffffff; text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
         
         .card-bottom-info { margin-top: auto; width: 100%; }
         
@@ -299,8 +282,8 @@
         
         .grid-time-badge {
             display: inline-flex; align-items: center; justify-content: center; gap: 4px; 
-            background: rgba(251, 113, 133, 0.1); color: #ffffff; 
-            border: 1px solid rgba(251, 113, 133, 0.4); padding: 3px 10px; border-radius: 4px; 
+            background: rgba(255, 255, 255, 0.1); color: #ffffff; 
+            border: 1px solid rgba(255, 255, 255, 0.4); padding: 3px 10px; border-radius: 4px; 
             font-family: var(--font-text); font-size: 11px; font-weight: 900; 
             text-transform: uppercase;
         }
@@ -309,7 +292,7 @@
             background: rgba(38, 17, 26, 0.9); padding: 8px 10px; border-radius: 4px; border: 1px solid rgba(251, 113, 133, 0.3);
             display: flex; flex-direction: column; align-items: center; width: 100%; box-shadow: inset 0 0 15px rgba(0,0,0,0.6); box-sizing: border-box;
         }
-        .card-queue-label { font-size: 10px; color: #ffffff; opacity: 0.9; text-transform: uppercase; letter-spacing: 1px; font-weight: 900; margin-bottom: 5px; }
+        .card-queue-label { font-size: 10px; color: #ffffff; opacity: 0.8; text-transform: uppercase; letter-spacing: 1px; font-weight: 900; margin-bottom: 5px; }
         
         .card-user-info-row { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; }
         .card-user-avatar { width: 26px; height: 26px; border-radius: 4px; border: 2px solid #ffffff; object-fit: cover; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 12px; font-family: var(--font-title); font-weight: 900; background: var(--bg-deep); color: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.5); }
@@ -328,7 +311,7 @@
             transition: all 0.3s; opacity: 0; transform: scale(0.8);
         }
         .card-view-item:hover .card-copy-btn { opacity: 1; transform: scale(1); }
-        .card-copy-btn:hover { background: #ffffff; color: var(--bg-deep); box-shadow: 0 0 15px rgba(251, 113, 133, 0.5); }
+        .card-copy-btn:hover { background: #ffffff; color: var(--bg-deep); box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); }
         .card-copy-btn.shifted { bottom: 36px; }
         
         .watch-online-btn {
@@ -365,8 +348,6 @@
         .modal-overlay.active { display: flex; opacity: 1; }
 
         .modal-girl-col { width: 0; position: relative; z-index: 1001; pointer-events: none; display: flex; align-items: center; }
-        
-        /* Изображения девушек в модалке разделены на левое и правое */
         .modal-girl-img { position: absolute; }
         .modal-left-img { height: 650px; right: -210px; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.6)); }
         .modal-right-img { height: 650px; left: -77px; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.6)); }
@@ -376,7 +357,7 @@
         .modal-content {
             background: var(--bg-deep); width: 90%; max-width: 1000px; max-height: 85vh; overflow-y: auto; position: relative;
             box-shadow: 0 0 60px rgba(0, 0, 0, 0.9), 0 0 40px rgba(251, 113, 133, 0.15); 
-            border: 2px solid var(--magic-main); padding: 6px; border-radius: 4px;
+            border: 2px solid #ffffff; padding: 6px; border-radius: 4px;
             transform: scale(0.95) translateY(20px); transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); scroll-behavior: smooth; 
         }
         .modal-overlay.active .modal-content { transform: scale(1) translateY(0); }
@@ -388,29 +369,29 @@
         .close-btn {
             position: absolute; top: 20px; right: 25px; color: #ffffff; cursor: pointer;
             z-index: 10; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; 
-            transition: all 0.3s; background: rgba(20, 9, 14, 0.7); border-radius: 4px; border: 1px solid rgba(251,113,133,0.3);
+            transition: all 0.3s; background: rgba(20, 9, 14, 0.7); border-radius: 4px; border: 1px solid rgba(255,255,255,0.3);
             backdrop-filter: blur(5px);
         }
-        .close-btn:hover { color: var(--magic-main); background: rgba(20, 9, 14, 0.95); transform: rotate(90deg) scale(1.1); box-shadow: 0 0 15px rgba(251, 113, 133, 0.4); }
+        .close-btn:hover { color: var(--bg-deep); background: #ffffff; transform: rotate(90deg) scale(1.1); box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); }
 
         .modal-hero { width: 100%; height: 350px; background-color: rgba(38, 17, 26, 1); background-size: cover; background-position: top center; position: relative; z-index: 1; box-shadow: 0 25px 60px 15px rgba(0, 0, 0, 0.8); transition: background-image 0.4s ease; }
         .modal-hero::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to top, var(--bg-velvet) 0%, transparent 100%); }
 
         .modal-body { padding: 0 45px 45px 45px; position: relative; margin-top: -130px; z-index: 2; display: flex; gap: 40px; }
-        .modal-poster { width: 220px; border-radius: 4px; box-shadow: 0 20px 45px rgba(0,0,0,0.7); border: 2px solid var(--magic-main); align-self: flex-start; }
+        .modal-poster { width: 220px; border-radius: 4px; box-shadow: 0 20px 45px rgba(0,0,0,0.7); border: 2px solid #ffffff; align-self: flex-start; }
         
         .modal-info-main { flex: 1; background: rgba(38, 17, 26, 0.85); padding: 30px; border-radius: 4px; border: 1px solid rgba(251, 113, 133, 0.2); overflow: hidden; backdrop-filter: blur(10px); }
 
         .modal-title-wrapper { display: flex; align-items: flex-start; gap: 15px; margin-bottom: 15px; flex-wrap: nowrap; max-width: 100%; overflow: hidden; }
-        .modal-title { font-family: var(--font-title); font-size: 38px; font-weight: 900; margin: 0; color: #ffffff; text-shadow: 0 3px 6px rgba(0,0,0,0.7), 0 0 20px rgba(251, 113, 133, 0.3); flex-shrink: 1; min-width: 0; line-height: 1.2; }
+        .modal-title { font-family: var(--font-title); font-size: 38px; font-weight: 900; margin: 0; color: #ffffff; text-shadow: 0 3px 6px rgba(0,0,0,0.7), 0 0 20px rgba(255, 255, 255, 0.3); flex-shrink: 1; min-width: 0; line-height: 1.2; }
         .modal-title-extras { display: flex; align-items: center; gap: 12px; flex-shrink: 0; margin-top: 6px; }
         .modal-year { color: #ffffff; font-size: 26px; font-weight: 700; opacity: 0.9; } 
 
-        .modal-title-wrapper .copy-btn { opacity: 0.8; transform: scale(1); background: rgba(251, 113, 133, 0.15); color: #ffffff; padding: 8px; display: inline-flex; align-items: center; justify-content: center; transition: all 0.3s; border: none; cursor: pointer; border-radius: 4px; }
+        .modal-title-wrapper .copy-btn { opacity: 0.8; transform: scale(1); background: rgba(255, 255, 255, 0.15); color: #ffffff; padding: 8px; display: inline-flex; align-items: center; justify-content: center; transition: all 0.3s; border: none; cursor: pointer; border-radius: 4px; }
         .modal-title-wrapper:hover .copy-btn { opacity: 1; }
-        .modal-title-wrapper .copy-btn:hover { background: #ffffff; color: var(--bg-deep); box-shadow: 0 0 15px rgba(251, 113, 133, 0.5); transform: scale(1.1); }
+        .modal-title-wrapper .copy-btn:hover { background: #ffffff; color: var(--bg-deep); box-shadow: 0 0 15px rgba(255, 255, 255, 0.8); transform: scale(1.1); }
         
-        .modal-meta-wrapper { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; border-bottom: 1px solid rgba(251, 113, 133, 0.2); padding-bottom: 18px; flex-wrap: wrap; }
+        .modal-meta-wrapper { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.2); padding-bottom: 18px; flex-wrap: wrap; }
         
         .modal-overview { color: #ffffff; font-size: 17px; line-height: 1.8; margin-bottom: 35px; font-weight: 600; }
 
@@ -419,8 +400,8 @@
         .modal-crew-list { display: flex; gap: 18px; flex-wrap: wrap; }
         .crew-card { display: flex; flex-direction: column; align-items: center; width: 80px; text-align: center; transition: transform 0.3s; cursor: pointer; }
         .crew-card:hover { transform: translateY(-5px); }
-        .crew-card img { width: 70px; height: 70px; border-radius: 4px; object-fit: cover; border: 2px solid var(--magic-dark); margin-bottom: 10px; box-shadow: 0 6px 15px rgba(0,0,0,0.4); }
-        .crew-card.director img { border-color: var(--cute-pink); box-shadow: 0 6px 15px rgba(251, 113, 133, 0.3); } 
+        .crew-card img { width: 70px; height: 70px; border-radius: 4px; object-fit: cover; border: 2px solid rgba(255, 255, 255, 0.5); margin-bottom: 10px; box-shadow: 0 6px 15px rgba(0,0,0,0.4); }
+        .crew-card.director img { border-color: #ffffff; box-shadow: 0 6px 15px rgba(255, 255, 255, 0.6); } 
         .crew-card span { font-size: 14px; color: #ffffff; line-height: 1.3; font-weight: 700; }
 
         .modal-grid { 
@@ -428,19 +409,19 @@
             grid-template-columns: repeat(2, 1fr); 
             background: rgba(20, 9, 14, 0.6); 
             border-radius: 4px; 
-            border: 1px solid rgba(251, 113, 133, 0.2); 
+            border: 1px solid rgba(255, 255, 255, 0.2); 
             overflow: hidden; 
             box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
         }
         
         .modal-grid.has-tags { grid-template-columns: repeat(3, 1fr); }
 
-        .modal-grid-box { font-size: 15px; color: #ffffff; font-weight: 800; background: rgba(38, 17, 26, 0.9); border: 1px solid rgba(251, 113, 133, 0.3); padding: 10px 18px; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); display: inline-flex; justify-content: center; align-items: center; gap: 8px; width: fit-content; margin-top: 5px; }
+        .modal-grid-box { font-size: 15px; color: #ffffff; font-weight: 800; background: rgba(38, 17, 26, 0.9); border: 1px solid rgba(255, 255, 255, 0.3); padding: 10px 18px; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); display: inline-flex; justify-content: center; align-items: center; gap: 8px; width: fit-content; margin-top: 5px; }
         
         .grid-item { font-size: 15px; display: flex; flex-direction: column; gap: 5px; padding: 22px 28px; box-sizing: border-box; }
         
-        .grid-item.border-right { border-right: 1px solid rgba(251, 113, 133, 0.2); }
-        .grid-item.border-bottom { border-bottom: 1px solid rgba(251, 113, 133, 0.2); }
+        .grid-item.border-right { border-right: 1px solid rgba(255, 255, 255, 0.2); }
+        .grid-item.border-bottom { border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
         
         .grid-item.full-width { grid-column: 1 / -1; } 
         .grid-label { color: #ffffff; opacity: 0.9; font-size: 13px; text-transform: uppercase; letter-spacing: 1.5px; font-family: var(--font-text); font-weight: 900; margin-bottom: 5px; }
@@ -449,20 +430,20 @@
         .modal-requester-link { cursor: pointer; transition: transform 0.3s; display: inline-flex; align-items: center; gap: 12px; margin-bottom: 10px; }
         .modal-requester-link:hover { transform: translateX(5px) scale(1.02); }
         .modal-requester-link span.name-text { font-family: var(--font-text); font-size: 17px; color: #ffffff; transition: color 0.3s, text-shadow 0.3s; font-weight: 900; }
-        .modal-requester-link:hover span.name-text { color: #fff; text-shadow: 0 0 10px rgba(251, 113, 133, 0.7); }
+        .modal-requester-link:hover span.name-text { text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); }
 
         .flex-row-responsive { display: flex; flex-direction: row; width: 100%; }
         .flex-col-half { flex: 1; padding: 22px 28px; display: flex; flex-direction: column; gap: 5px; box-sizing: border-box; }
-        .border-right-dashed { border-right: 1px solid rgba(251, 113, 133, 0.2); }
+        .border-right-dashed { border-right: 1px solid rgba(255, 255, 255, 0.2); }
 
-        .trailer-container { width: 100%; aspect-ratio: 16/9; border: 2px solid #ffffff; border-radius: 4px; margin-top: 30px; box-shadow: 0 10px 35px rgba(0,0,0,0.7), 0 0 20px rgba(251, 113, 133, 0.1); overflow: hidden; position: relative;}
+        .trailer-container { width: 100%; aspect-ratio: 16/9; border: 2px solid #ffffff; border-radius: 4px; margin-top: 30px; box-shadow: 0 10px 35px rgba(0,0,0,0.7), 0 0 20px rgba(255, 255, 255, 0.1); overflow: hidden; position: relative;}
         .trailer-container iframe { width: 100%; height: 100%; border: none; }
 
         .footer-badge { display: flex; align-items: center; gap: 12px; justify-content: center; margin-top: 40px; padding-bottom: 25px; background: transparent; cursor: pointer; transition: all 0.3s ease; opacity: 0.8; }
         .footer-badge:hover { opacity: 1; transform: translateY(-3px); }
         .footer-badge img { width: 40px; height: 40px; border-radius: 4px; object-fit: cover; border: 2px solid #ffffff; transition: all 0.3s ease; }
-        .footer-badge:hover img { border-color: #ffffff; box-shadow: 0 0 15px rgba(251, 113, 133, 0.4); }
-        .footer-badge:hover .creator-name { color: #ffffff; text-shadow: 0 0 10px rgba(251, 113, 133, 0.5); }
+        .footer-badge:hover img { border-color: #ffffff; box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); }
+        .footer-badge:hover .creator-name { color: #ffffff; text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); }
         .footer-badge .creator-label { display:block; font-size:11px; font-family: var(--font-text); color: #ffffff; opacity: 0.9; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 900; }
 
         ::-webkit-scrollbar { width: 10px; }
@@ -481,20 +462,20 @@
             
             .modal-grid { grid-template-columns: 1fr !important; }
             .grid-item.border-right { border-right: none !important; }
-            .grid-item { border-bottom: 1px solid rgba(251, 113, 133, 0.2); }
-            #modalTagsColumn { grid-row: auto !important; grid-column: 1 / -1 !important; border-bottom: 1px solid rgba(251, 113, 133, 0.2); padding-left: 28px !important;}
+            .grid-item { border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
+            #modalTagsColumn { grid-row: auto !important; grid-column: 1 / -1 !important; border-bottom: 1px solid rgba(255, 255, 255, 0.2); padding-left: 28px !important;}
             .grid-item.full-width { border-bottom: none; }
             
             .flex-row-responsive { flex-direction: column; }
-            .flex-col-half.border-right-dashed { border-right: none; border-bottom: 1px solid rgba(251, 113, 133, 0.2); }
+            .flex-col-half.border-right-dashed { border-right: none; border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
 
             .header-top h1 { font-size: 34px; }
             .header-top h1::before, .header-top h1::after { display: none; }
         }
     
         .legendary-badge {
-            box-shadow: 0 4px 15px rgba(0,0,0,0.8), inset 0 0 20px #ffffff, 0 0 30px rgba(251, 113, 133, 0.6) !important;
-            border-color: #ffffff !important; color: #fff !important; text-shadow: 0 0 10px #ffffff, 0 0 15px #fff !important; font-weight: 900 !important;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.8), inset 0 0 20px #ffffff, 0 0 30px rgba(255, 255, 255, 0.5) !important;
+            border-color: #ffffff !important; color: #fff !important; text-shadow: 0 0 10px #ffffff, 0 0 15px #ffffff !important; font-weight: 900 !important;
         }
     </style>
 </head>
@@ -508,8 +489,7 @@
     <div class="container">
         <div class="content-wrapper">
             <div class="header">
-                
-                <!-- 
+                <!-- Временно скрыто 
                 <a href="https://cherteya.github.io/lists/" class="back-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
                     В Архивы
@@ -650,8 +630,8 @@
     let isOnlineBtnVisible = true;
 
     const fallbackImage = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='185' height='278' viewBox='0 0 185 278'%3E%3Crect width='185' height='278' fill='%2314090e'/%3E%3Cpath d='M92.5 130c19.3 0 35-15.7 35-35s-15.7-35-35-35-35 15.7-35 35 15.7 35 35 35zm0 15c-23.3 0-70 11.7-70 35v25h140v-25c0-23.3-46.7-35-70-35z' fill='%2326111a'/%3E%3C/svg%3E";
-    const fallbackPoster = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='750' viewBox='0 0 500 750'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2326111a'/%3E%3Cstop offset='100%25' stop-color='%2314090e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='500' height='750' fill='url(%23bg)'/%3E%3Cg transform='translate(0, -20)'%3E%3Crect x='160' y='270' width='180' height='250' rx='4' fill='%233d1c2a' stroke='%23ffffff' stroke-width='6'/%3E%3Crect x='195' y='270' width='110' height='250' fill='%2314090e'/%3E%3Crect x='172' y='290' width='12' height='16' rx='2' fill='%23ffffff'/%3E%3Crect x='172' y='330' width='12' height='16' rx='2' fill='%23ffffff'/%3E%3Crect x='172' y='370' width='12' height='16' rx='2' fill='%23ffffff'/%3E%3Crect x='172' y='410' width='12' height='16' rx='2' fill='%23ffffff'/%3E%3Crect x='172' y='450' width='12' height='16' rx='2' fill='%23ffffff'/%3E%3Crect x='172' y='490' width='12' height='16' rx='2' fill='%23ffffff'/%3E%3Crect x='316' y='290' width='12' height='16' rx='2' fill='%23ffffff'/%3E%3Crect x='316' y='330' width='12' height='16' rx='2' fill='%23ffffff'/%3E%3Crect x='316' y='370' width='12' height='16' rx='2' fill='%23ffffff'/%3E%3Crect x='316' y='410' width='12' height='16' rx='2' fill='%23ffffff'/%3E%3Crect x='316' y='450' width='12' height='16' rx='2' fill='%23ffffff'/%3E%3Crect x='316' y='490' width='12' height='16' rx='2' fill='%23ffffff'/%3E%3Cpolygon points='230,365 230,425 275,395' fill='%23fb7185'/%3E%3Ccircle cx='345' cy='250' r='14' fill='%23fb7185'/%3E%3Ccircle cx='375' cy='280' r='10' fill='%23fde047'/%3E%3Ccircle cx='145' cy='520' r='12' fill='%23fde047'/%3E%3C/g%3E%3C/svg%3E";
-    const fallbackBackdrop = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1000' height='320' viewBox='0 0 1000 320'%3E%3Cdefs%3E%3ClinearGradient id='bgH' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2326111a'/%3E%3Cstop offset='100%25' stop-color='%2314090e'/%3E%3C/linearGradient%3E%3Cpattern id='f' width='100' height='160' patternUnits='userSpaceOnUse'%3E%3Crect x='20' y='20' width='60' height='25' rx='4' fill='%23ffffff' opacity='0.15'/%3E%3Crect x='20' y='115' width='60' height='25' rx='4' fill='%23ffffff' opacity='0.15'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='1000' height='320' fill='url(%23bgH)'/%3E%3Crect y='80' width='1000' height='160' fill='%233d1c2a' opacity='0.4'/%3E%3Crect y='80' width='1000' height='160' fill='url(%23f)'/%3E%3Cg transform='translate(500, 160)'%3E%3Cpolygon points='-25,-35 -25,35 40,0' fill='%23fb7185' opacity='0.5'/%3E%3Ccircle cx='-60' cy='-50' r='12' fill='%23fde047' opacity='0.4'/%3E%3Ccircle cx='70' cy='50' r='18' fill='%23ffffff' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E";
+    const fallbackPoster = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='750' viewBox='0 0 500 750'%3E%3Cdefs%3E%3ClinearGradient id='bg' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2326111a'/%3E%3Cstop offset='100%25' stop-color='%2314090e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='500' height='750' fill='url(%23bg)'/%3E%3Cg transform='translate(0, -20)'%3E%3Crect x='160' y='270' width='180' height='250' rx='4' fill='%233d1c2a' stroke='%23ffffff' stroke-width='6'/%3E%3Crect x='195' y='270' width='110' height='250' fill='%2314090e'/%3E%3Crect x='172' y='290' width='12' height='16' rx='2' fill='%23ffffff'/%3E%3Crect x='172' y='330' width='12' height='16' rx='2' fill='%23ffffff'/%3E%3Crect x='172' y='370' width='12' height='16' rx='2' fill='%23ffffff'/%3E%3Crect x='172' y='410' width='12' height='16' rx='2' fill='%23ffffff'/%3E%3Crect x='172' y='450' width='12' height='16' rx='2' fill='%23ffffff'/%3E%3Crect x='172' y='490' width='12' height='16' rx='2' fill='%23ffffff'/%3E%3Crect x='316' y='290' width='12' height='16' rx='2' fill='%23ffffff'/%3E%3Crect x='316' y='330' width='12' height='16' rx='2' fill='%23ffffff'/%3E%3Crect x='316' y='370' width='12' height='16' rx='2' fill='%23ffffff'/%3E%3Crect x='316' y='410' width='12' height='16' rx='2' fill='%23ffffff'/%3E%3Crect x='316' y='450' width='12' height='16' rx='2' fill='%23ffffff'/%3E%3Crect x='316' y='490' width='12' height='16' rx='2' fill='%23ffffff'/%3E%3Cpolygon points='230,365 230,425 275,395' fill='%23f43f5e'/%3E%3Ccircle cx='345' cy='250' r='14' fill='%23f43f5e'/%3E%3Ccircle cx='375' cy='280' r='10' fill='%23fde047'/%3E%3Ccircle cx='145' cy='520' r='12' fill='%23fde047'/%3E%3C/g%3E%3C/svg%3E";
+    const fallbackBackdrop = "data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1000' height='320' viewBox='0 0 1000 320'%3E%3Cdefs%3E%3ClinearGradient id='bgH' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2326111a'/%3E%3Cstop offset='100%25' stop-color='%2314090e'/%3E%3C/linearGradient%3E%3Cpattern id='f' width='100' height='160' patternUnits='userSpaceOnUse'%3E%3Crect x='20' y='20' width='60' height='25' rx='4' fill='%23ffffff' opacity='0.15'/%3E%3Crect x='20' y='115' width='60' height='25' rx='4' fill='%23ffffff' opacity='0.15'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='1000' height='320' fill='url(%23bgH)'/%3E%3Crect y='80' width='1000' height='160' fill='%233d1c2a' opacity='0.4'/%3E%3Crect y='80' width='1000' height='160' fill='url(%23f)'/%3E%3Cg transform='translate(500, 160)'%3E%3Cpolygon points='-25,-35 -25,35 40,0' fill='%23f43f5e' opacity='0.5'/%3E%3Ccircle cx='-60' cy='-50' r='12' fill='%23fbbf24' opacity='0.4'/%3E%3Ccircle cx='70' cy='50' r='18' fill='%23ffffff' opacity='0.3'/%3E%3C/g%3E%3C/svg%3E";
 
     window.handlePosterError = function(img) {
         img.onerror = null;
@@ -714,8 +694,8 @@
     function stringToColor(str) { let hash = 0; for (let i = 0; i < str.length; i++) hash = str.charCodeAt(i) + ((hash << 5) - hash); return `hsl(${Math.abs(hash) % 360}, 70%, 75%)`; }
     
     function getRatingColor(rating) {
-        if (!rating) return 'var(--magic-main)'; const r = parseFloat(rating); if (isNaN(r)) return 'var(--magic-main)';
-        let hue = ((r - 1) / 9) * 140; if (hue < 0) hue = 0; if (hue > 140) hue = 140; return `hsl(${hue}, 80%, 65%)`;
+        if (!rating) return '#ffffff'; const r = parseFloat(rating); if (isNaN(r)) return '#ffffff';
+        let hue = ((r - 1) / 9) * 140; if (hue < 0) hue = 0; if (hue > 140) hue = 140; return `hsl(${hue}, 80%, 70%)`;
     }
 
     function getInitials(name) { return (name || '??').replace('@', '').trim().substring(0, 1).toUpperCase(); }
@@ -740,7 +720,7 @@
             else if (typeof data === 'object' && data !== null) { for (const user in data) { if (user === "_metadata_") continue; if (Array.isArray(data[user])) data[user].forEach(movie => rawMoviesData.push({ ...movie, requestedBy: user, parsedDate: parseDateObj(movie.dateRequested) })); } }
             populateUserFilter(); updateToggleButton(); applyFilters();
         } catch (error) {
-            document.getElementById('render-area').innerHTML = `<div style="text-align: center; padding: 60px; color: var(--cute-pink); font-family: var(--font-text); font-weight: 700; font-size: 20px;">Пока недоступно (Ошибка)</div>`;
+            document.getElementById('render-area').innerHTML = `<div style="text-align: center; padding: 60px; color: #ffffff; font-family: var(--font-text); font-weight: 700; font-size: 20px;">Пока недоступно (Ошибка)</div>`;
         }
     }
 
@@ -809,7 +789,7 @@
         renderArea.innerHTML = '';
         
         if (currentViewData.length === 0) {
-            renderArea.innerHTML = '<div style="text-align: center; padding: 60px; font-size: 22px; color: var(--text-muted); font-family: var(--font-text); font-weight: 800;">В архивах магии не найдено ✨</div>';
+            renderArea.innerHTML = '<div style="text-align: center; padding: 60px; font-size: 22px; color: #ffffff; font-family: var(--font-text); font-weight: 800;">В архивах магии не найдено ✨</div>';
             return;
         }
 
@@ -846,11 +826,11 @@
                 if ((prevMovie.status === 'Не смотрели' || prevMovie.isWatching === true) && movie.status === 'Смотрели') {
                     const dividerTr = document.createElement('tr');
                     dividerTr.innerHTML = `
-                        <td colspan="5" style="padding: 35px 15px; cursor: default; border-bottom: 1px solid rgba(251, 113, 133, 0.2);">
+                        <td colspan="5" style="padding: 35px 15px; cursor: default; border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
                             <div style="display: flex; align-items: center; justify-content: center;">
-                                <div style="flex-grow: 1; height: 2px; background: linear-gradient(to right, transparent, var(--magic-main)); opacity: 0.5;"></div>
-                                <span style="padding: 0 25px; font-family: var(--font-title); font-size: 20px; font-weight: 900; color: var(--magic-main); text-shadow: 0 0 15px rgba(251, 113, 133, 0.7); text-transform: uppercase; letter-spacing: 3px;">✨ Просмотрено ✨</span>
-                                <div style="flex-grow: 1; height: 2px; background: linear-gradient(to left, transparent, var(--magic-main)); opacity: 0.5;"></div>
+                                <div style="flex-grow: 1; height: 2px; background: linear-gradient(to right, transparent, #ffffff); opacity: 0.6;"></div>
+                                <span style="padding: 0 25px; font-family: var(--font-title); font-size: 20px; font-weight: 900; color: #ffffff; text-shadow: 0 0 15px rgba(255, 255, 255, 0.5); text-transform: uppercase; letter-spacing: 3px;">✨ Просмотрено ✨</span>
+                                <div style="flex-grow: 1; height: 2px; background: linear-gradient(to left, transparent, #ffffff); opacity: 0.6;"></div>
                             </div>
                         </td>
                     `;
@@ -866,11 +846,11 @@
             
             let statusText = '';
             if (movie.isWatching) {
-                statusText = `<span class="badge-status" style="background: #fb7185; color: #14090e; box-shadow: 0 4px 15px rgba(251, 113, 133, 0.5);">СМОТРИМ</span>`;
+                statusText = `<span class="badge-status" style="background: #ffffff; color: var(--bg-deep); box-shadow: 0 4px 15px rgba(255,255,255,0.5);">СМОТРИМ</span>`;
             } else if (isWatched) {
-                statusText = `<span class="badge-status" style="background: rgba(38, 17, 26, 0.9); color: var(--magic-main); border: 1px solid rgba(251, 113, 133, 0.4);">СМОТРЕЛИ</span>`;
+                statusText = `<span class="badge-status" style="background: rgba(38, 17, 26, 0.9); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.5);">СМОТРЕЛИ</span>`;
             } else {
-                statusText = `<span class="badge-status" style="background: rgba(251, 113, 133, 0.2); color: var(--text-main); border: 1px solid rgba(251, 113, 133, 0.4); box-shadow: 0 4px 15px rgba(0,0,0,0.5);">В ОЧЕРЕДИ</span>`;
+                statusText = `<span class="badge-status" style="background: rgba(255, 255, 255, 0.2); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.5); box-shadow: 0 4px 15px rgba(0,0,0,0.3);">В ОЧЕРЕДИ</span>`;
             }
             
             let watchedDetails = '';
@@ -879,16 +859,16 @@
                 if (movie.ourRating && movie.ourRating !== "Без оценки") {
                     const parsedRating = parseFloat(movie.ourRating);
                     if (parsedRating === 1000) watchedDetails += `<div class="date-badge legendary-badge" style="margin-top: 0; width: fit-content; flex-direction: column; gap: 2px; padding: 5px 16px; line-height: 1.1;"><span style="font-size: 10px; text-transform: uppercase; opacity: 0.9;">Наша Оценка:</span><span style="font-size: 17px;">1000</span></div>`;
-                    else { const rColor = getRatingColor(movie.ourRating); watchedDetails += `<div class="date-badge" style="margin-top: 0; width: fit-content; color: ${rColor}; border-color: ${rColor}; box-shadow: 0 0 15px rgba(0,0,0,0.6);">Оценка: ${movie.ourRating}</div>`; }
+                    else { const rColor = getRatingColor(movie.ourRating); watchedDetails += `<div class="date-badge" style="margin-top: 0; width: fit-content; color: ${rColor}; border-color: ${rColor}; box-shadow: 0 0 15px rgba(0,0,0,0.4);">Оценка: ${movie.ourRating}</div>`; }
                 }
-                if (movie.cried) watchedDetails += `<div class="date-badge" style="margin-top: 0; width: fit-content; font-family: var(--font-text); font-size: 13px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="var(--magic-light)" stroke="var(--magic-light)" stroke-width="1"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg> Слёзы</div>`;
+                if (movie.cried) watchedDetails += `<div class="date-badge" style="margin-top: 0; width: fit-content; font-family: var(--font-text); font-size: 13px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="#ffffff" stroke="#ffffff" stroke-width="1"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg> Слёзы</div>`;
             }
             
             if (movie.isTheme) {
-                watchedDetails += `<div class="date-badge" style="margin-top: 0; width: fit-content; background: #9b59b6; color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.4); box-shadow: 0 0 15px rgba(155, 89, 182, 0.6);">Тем. неделя</div>`;
+                watchedDetails += `<div class="date-badge" style="margin-top: 0; width: fit-content; background: #9b59b6; color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.5); box-shadow: 0 0 15px rgba(155, 89, 182, 0.6);">Тем. неделя</div>`;
             }
             if (movie.isBanned) {
-                watchedDetails += `<div class="date-badge" style="margin-top: 0; width: fit-content; background: #e74c3c; color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.4); box-shadow: 0 0 15px rgba(231, 76, 60, 0.6);">Получили БАН</div>`;
+                watchedDetails += `<div class="date-badge" style="margin-top: 0; width: fit-content; background: #e74c3c; color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.5); box-shadow: 0 0 15px rgba(231, 76, 60, 0.6);">Получили БАН</div>`;
             }
             const watchedDateHTML = watchedDetails ? `<div style="display: flex; flex-direction: column; align-items: center; gap: 8px; margin-top: 8px;">${watchedDetails}</div>` : '';
 
@@ -912,11 +892,11 @@
             let directorHtml = '';
             if (movie.director && movie.director.name && movie.director.name !== "Нет данных") {
                 directorHtml = `<img src="${getSafePhoto(movie.director.photo)}" class="avatar director-avatar" alt="" title="Творец: ${escapeHTML(movie.director.name)}">`;
-                if(castHtml) directorHtml += '<div style="width: 2px; height: 30px; background: rgba(251, 113, 133, 0.3); margin: 0 10px; border-radius: 2px;"></div>';
+                if(castHtml) directorHtml += '<div style="width: 2px; height: 30px; background: rgba(255, 255, 255, 0.4); margin: 0 10px; border-radius: 2px;"></div>';
             }
 
             let isSeries = movie.seasons && movie.episodes && String(movie.seasons) !== "0" && String(movie.episodes) !== "0";
-            let runtimeDisplay = `<div style="display: flex; flex-direction: column; align-items: center; gap: 8px;"><span class="badge-status" style="background: rgba(251, 113, 133, 0.1); color: var(--magic-light); box-shadow: none;">${isSeries ? 'ЗА СЕРИЮ' : 'ВРЕМЯ'}</span><div class="time-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <span>${movie.runtime && movie.runtime !== 'Неизвестно' ? movie.runtime : 'Неизвестно'}</span></div>`;
+            let runtimeDisplay = `<div style="display: flex; flex-direction: column; align-items: center; gap: 8px;"><span class="badge-status" style="background: rgba(255, 255, 255, 0.2); color: #ffffff; box-shadow: none;">${isSeries ? 'ЗА СЕРИЮ' : 'ВРЕМЯ'}</span><div class="time-box"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> <span>${movie.runtime && movie.runtime !== 'Неизвестно' ? movie.runtime : 'Неизвестно'}</span></div>`;
             if (isSeries) runtimeDisplay += `<div class="time-box episodes"><span>Сезонов: ${movie.seasons}</span><span>Серий: ${movie.episodes}</span></div>`;
             runtimeDisplay += `</div>`;
 
@@ -924,7 +904,7 @@
             let avatarMarkup = movie.userAvatar && movie.userAvatar.startsWith('http') ? `<img src="${movie.userAvatar}" class="req-avatar" alt="">` : `<div class="req-avatar" style="background-color: ${userColor}; border-color: ${userColor};">${getInitials(cleanNick)}</div>`;
             
             const auctionHTML = movie.isAuction ? `<div class="date-badge" style="margin-top: 8px; color: var(--warm-star); border-color: var(--warm-star); background: rgba(38, 17, 26, 0.9); font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 900;">✦ Аукцион ✦</div>` : '';
-            const seasonHTML = movie.requestedSeason > 0 ? `<div class="date-badge" style="margin-top: 8px; color: #fff; border-color: var(--magic-main); font-size: 13px;">${movie.requestedSeason} сезон</div>` : '';
+            const seasonHTML = movie.requestedSeason > 0 ? `<div class="date-badge" style="margin-top: 8px; color: #fff; border-color: #ffffff; font-size: 13px;">${movie.requestedSeason} сезон</div>` : '';
 
             tr.innerHTML = `
                 <td><div class="poster-wrapper"><img src="${posterUrl}" onerror="handlePosterError(this)" alt=""></div></td>
@@ -964,13 +944,13 @@
                     const dividerDiv = document.createElement('div');
                     dividerDiv.style.gridColumn = '1 / -1';
                     dividerDiv.innerHTML = `
-                        <div style="width: 100%; border-top: 2px solid rgba(251, 113, 133, 0.4); margin: 20px 0;"></div>
+                        <div style="width: 100%; border-top: 2px solid rgba(255, 255, 255, 0.3); margin: 20px 0;"></div>
                         <div style="display: flex; align-items: center; justify-content: center; margin: 15px 0;">
-                            <div style="flex-grow: 1; height: 2px; background: linear-gradient(to right, transparent, var(--magic-main)); opacity: 0.5;"></div>
-                            <span style="padding: 0 25px; font-family: var(--font-title); font-size: 22px; font-weight: 900; color: var(--magic-main); text-shadow: 0 0 20px rgba(251, 113, 133, 0.8); text-transform: uppercase; letter-spacing: 3px;">✨ Просмотрено ✨</span>
-                            <div style="flex-grow: 1; height: 2px; background: linear-gradient(to left, transparent, var(--magic-main)); opacity: 0.5;"></div>
+                            <div style="flex-grow: 1; height: 2px; background: linear-gradient(to right, transparent, #ffffff); opacity: 0.6;"></div>
+                            <span style="padding: 0 25px; font-family: var(--font-title); font-size: 22px; font-weight: 900; color: #ffffff; text-shadow: 0 0 20px rgba(255, 255, 255, 0.5); text-transform: uppercase; letter-spacing: 3px;">✨ Просмотрено ✨</span>
+                            <div style="flex-grow: 1; height: 2px; background: linear-gradient(to left, transparent, #ffffff); opacity: 0.6;"></div>
                         </div>
-                        <div style="width: 100%; border-bottom: 2px solid rgba(251, 113, 133, 0.4); margin: 20px 0 30px 0;"></div>
+                        <div style="width: 100%; border-bottom: 2px solid rgba(255, 255, 255, 0.3); margin: 20px 0 30px 0;"></div>
                     `;
                     gridContainer.appendChild(dividerDiv);
                 }
@@ -989,11 +969,11 @@
             
             let statusMarkup = '';
             if (movie.isWatching) {
-                statusMarkup = `<div class="card-status" style="background: #fb7185; color: #14090e;">Смотрим</div>`;
+                statusMarkup = `<div class="card-status" style="background: #ffffff; color: var(--bg-deep);">Смотрим</div>`;
             } else if (isWatched) {
-                statusMarkup = `<div class="card-status" style="background: rgba(38, 17, 26, 0.9); color: var(--magic-main); border: 1px solid rgba(251, 113, 133, 0.4);">Смотрели</div>`;
+                statusMarkup = `<div class="card-status" style="background: rgba(38, 17, 26, 0.9); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.5);">Смотрели</div>`;
             } else {
-                statusMarkup = `<div class="card-status" style="background: rgba(251, 113, 133, 0.2); color: var(--text-main); border: 1px solid rgba(251, 113, 133, 0.4);">В очереди</div>`;
+                statusMarkup = `<div class="card-status" style="background: rgba(255, 255, 255, 0.2); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.5);">В очереди</div>`;
             }
             
             let bottomBadges = '';
@@ -1008,9 +988,9 @@
             }
             if (movie.isAuction) bottomBadges += `<div class="card-mini-badge auction">✦ АУК ✦</div>`;
             if (movie.isTheme) bottomBadges += `<div class="card-mini-badge" style="color: #fff; background: rgba(155, 89, 182, 0.9); border-color: #9b59b6;">🎨 Тем.Нед.</div>`;
-            if (isWatched && movie.cried) bottomBadges += `<div class="card-mini-badge cried"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fb7185" stroke="#fb7185" stroke-width="1"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg> Слёзы</div>`;
+            if (isWatched && movie.cried) bottomBadges += `<div class="card-mini-badge cried"><svg width="14" height="14" viewBox="0 0 24 24" fill="#ffffff" stroke="#ffffff" stroke-width="1"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg> Слёзы</div>`;
             if (movie.isBanned) bottomBadges += `<div class="card-mini-badge" style="color: #fff; background: rgba(231, 76, 60, 0.9); border-color: #e74c3c;">🚫 БАН</div>`;
-            if (movie.requestedSeason && movie.requestedSeason > 0) bottomBadges += `<div class="card-mini-badge" style="color: #fff; border-color: var(--magic-main);">СЕЗОН ${movie.requestedSeason}</div>`;
+            if (movie.requestedSeason && movie.requestedSeason > 0) bottomBadges += `<div class="card-mini-badge" style="color: #fff; border-color: #ffffff;">СЕЗОН ${movie.requestedSeason}</div>`;
 
             let avatarMarkup = movie.userAvatar && movie.userAvatar.startsWith('http') ? `<img src="${movie.userAvatar}" class="card-user-avatar" alt="">` : `<div class="card-user-avatar" style="background-color: ${userColor}; border-color: ${userColor}; color: var(--bg-deep); font-weight: 900;">${getInitials(cleanNick)}</div>`;
 
@@ -1048,14 +1028,14 @@
                         <h3 class="card-title-text resize-title">${cleanTitle}</h3>
                     </div>
                     
-                    <div style="width: 100%; border-bottom: 1px solid rgba(251, 113, 133, 0.2); margin: 4px 0 6px 0;"></div>
-                    <div style="font-family: var(--font-text); font-size: 11px; font-weight: 700; color: var(--text-muted); width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: center;" title="${movieGenres}">${movieGenres}</div>
-                    <div style="width: 100%; border-bottom: 1px solid rgba(251, 113, 133, 0.2); margin: 6px 0 10px 0;"></div>
+                    <div style="width: 100%; border-bottom: 1px solid rgba(255, 255, 255, 0.2); margin: 4px 0 6px 0;"></div>
+                    <div style="font-family: var(--font-text); font-size: 11px; font-weight: 700; color: #ffffff; width: 100%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: center;" title="${movieGenres}">${movieGenres}</div>
+                    <div style="width: 100%; border-bottom: 1px solid rgba(255, 255, 255, 0.2); margin: 6px 0 10px 0;"></div>
 
                     <div style="margin-top: auto; width: 100%;">
                         <div class="card-date-meta">
                             <span>${movie.year || '----'}</span>
-                            <span style="color: var(--magic-dark);">✧</span>
+                            <span style="color: #ffffff; opacity: 0.8;">✧</span>
                             <span class="grid-time-badge">${runtimeText}</span>
                         </div>
                         <div class="card-queue-box">
@@ -1201,24 +1181,24 @@
         
         let statusTextHTML = '';
         if (movie.isWatching) {
-            statusTextHTML = `<span class="badge-status" style="background: #fb7185; color: #14090e; box-shadow: 0 4px 15px rgba(251, 113, 133, 0.5); margin:0; padding:8px 16px; font-size: 14px;">СМОТРИМ</span>`;
+            statusTextHTML = `<span class="badge-status" style="background: #ffffff; color: var(--bg-deep); box-shadow: 0 4px 15px rgba(255,255,255,0.5); margin:0; padding:8px 16px; font-size: 14px;">СМОТРИМ</span>`;
         } else if (isWatched) {
-            statusTextHTML = `<span class="badge-status" style="background: rgba(38, 17, 26, 0.9); color: var(--magic-main); border: 1px solid rgba(251, 113, 133, 0.4); margin:0; padding:8px 16px; font-size: 14px;">СМОТРЕЛИ</span>`;
+            statusTextHTML = `<span class="badge-status" style="background: rgba(38, 17, 26, 0.9); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.5); margin:0; padding:8px 16px; font-size: 14px;">СМОТРЕЛИ</span>`;
         } else {
-            statusTextHTML = `<span class="badge-status" style="background: rgba(251, 113, 133, 0.2); color: var(--text-main); border: 1px solid rgba(251, 113, 133, 0.4); box-shadow: 0 4px 15px rgba(0,0,0,0.5); margin:0; padding:8px 16px; font-size: 14px;">В ОЧЕРЕДИ</span>`;
+            statusTextHTML = `<span class="badge-status" style="background: rgba(255, 255, 255, 0.2); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.5); box-shadow: 0 4px 15px rgba(0,0,0,0.3); margin:0; padding:8px 16px; font-size: 14px;">В ОЧЕРЕДИ</span>`;
         }
         document.getElementById('modalStatusLabel').innerHTML = statusTextHTML;
 
-        document.getElementById('modalDateReq').innerHTML = movie.dateRequested ? `<div class="modal-grid-box">${movie.dateRequested.split(' ')[0]}</div>` : `<div class="grid-value" style="color: var(--text-muted); font-weight: normal;">Нет данных</div>`;
+        document.getElementById('modalDateReq').innerHTML = movie.dateRequested ? `<div class="modal-grid-box">${movie.dateRequested.split(' ')[0]}</div>` : `<div class="grid-value" style="color: #ffffff; opacity: 0.9; font-weight: normal;">Нет данных</div>`;
         
         const dateWatchedEl = document.getElementById('modalDateWatched');
         let watchedHtml = '';
         if (movie.isWatching) {
-            watchedHtml = `<div class="modal-grid-box" style="margin-top: 0; background: rgba(38, 17, 26, 0.9); border-color: rgba(251, 113, 133, 0.3); color: #fb7185;">В процессе магии...</div>`;
+            watchedHtml = `<div class="modal-grid-box" style="margin-top: 0; background: rgba(38, 17, 26, 0.9); border-color: rgba(255, 255, 255, 0.5); color: #ffffff;">В процессе магии...</div>`;
         } else if (isWatched && movie.dateWatched) {
             watchedHtml = `<div class="modal-grid-box" style="margin-top: 0;">${movie.dateWatched.split(' ')[0]}</div>`;
         } else { 
-            watchedHtml = `<div class="modal-grid-box" style="background: rgba(251,113,133,0.1); border-color: transparent;">Ждет своей очереди</div>`; 
+            watchedHtml = `<div class="modal-grid-box" style="background: rgba(255,255,255,0.15); border-color: transparent; color: #ffffff; opacity: 0.9;">Ждет своей очереди</div>`; 
         }
         dateWatchedEl.innerHTML = `<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 8px;">${watchedHtml}</div>`;
         
@@ -1237,9 +1217,9 @@
                 tagsHtml += `<div class="modal-grid-box" style="margin-top: 0; color: ${rColor}; border-color: ${rColor};">Наша Оценка: ${movie.ourRating}</div>`; 
             }
         }
-        if (isWatched && movie.cried) tagsHtml += `<div class="modal-grid-box" style="margin-top: 0;"><svg width="20" height="20" viewBox="0 0 24 24" fill="var(--magic-light)" stroke="var(--magic-light)" stroke-width="1" style="margin-right: 4px;"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg> Слёзы</div>`;
-        if (movie.isTheme) tagsHtml += `<div class="modal-grid-box" style="margin-top: 0; color: #fff; border-color: #9b59b6; background: rgba(155, 89, 182, 0.3);">🎨 Тем. неделя</div>`;
-        if (movie.isBanned) tagsHtml += `<div class="modal-grid-box" style="margin-top: 0; color: #fff; border-color: #ef4444; background: rgba(239, 68, 68, 0.3); font-size: 14px;">🚫 Получили БАН</div>`;
+        if (isWatched && movie.cried) tagsHtml += `<div class="modal-grid-box" style="margin-top: 0;"><svg width="20" height="20" viewBox="0 0 24 24" fill="#ffffff" stroke="#ffffff" stroke-width="1" style="margin-right: 4px;"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg> Слёзы</div>`;
+        if (movie.isTheme) tagsHtml += `<div class="modal-grid-box" style="margin-top: 0; color: #fff; border-color: #9b59b6; background: rgba(155, 89, 182, 0.4);">🎨 Тем. неделя</div>`;
+        if (movie.isBanned) tagsHtml += `<div class="modal-grid-box" style="margin-top: 0; color: #fff; border-color: #ef4444; background: rgba(239, 68, 68, 0.4); font-size: 14px;">🚫 Получили БАН</div>`;
         
         const tagsCol = document.getElementById('modalTagsColumn');
         if (tagsHtml === '') {
@@ -1255,12 +1235,12 @@
             dateWatchedCol.classList.add('border-right');
         }
 
-        let financesValue = (movie.budget || movie.revenue) ? `<div class="modal-grid-box" style="margin-top: 4px;">${movie.budget || '0 $'} / ${movie.revenue || '0 $'}</div>` : `<div class="grid-value" style="color: var(--text-muted); font-weight: normal; margin-top: 4px;">0 $ / 0 $</div>`;
+        let financesValue = (movie.budget || movie.revenue) ? `<div class="modal-grid-box" style="margin-top: 4px;">${movie.budget || '0 $'} / ${movie.revenue || '0 $'}</div>` : `<div class="grid-value" style="color: #ffffff; opacity: 0.9; font-weight: normal; margin-top: 4px;">0 $ / 0 $</div>`;
         let isSeriesModal = movie.seasons && movie.episodes && String(movie.seasons) !== "0" && String(movie.episodes) !== "0";
         
         let row3Html = '';
         if (isSeriesModal) {
-            let seasonsValue = `<div class="modal-grid-box" style="margin-top: 4px; font-size: 14px; color: var(--magic-light); border-color: rgba(251, 113, 133, 0.4);">📺 Сезонов: ${movie.seasons} | Серий: ${movie.episodes}</div>`;
+            let seasonsValue = `<div class="modal-grid-box" style="margin-top: 4px; font-size: 14px; color: #ffffff; border-color: rgba(255, 255, 255, 0.4);">📺 Сезонов: ${movie.seasons} | Серий: ${movie.episodes}</div>`;
             row3Html = `
                 <div class="flex-row-responsive">
                     <div class="flex-col-half border-right-dashed">
@@ -1289,7 +1269,7 @@
         
         let reqInner = `<div class="modal-requester-link hover-active" onclick="window.open('https://twitch.tv/${cleanNickModal}', '_blank')" style="display:flex; align-items:center; margin-bottom: 10px;">${avatarMarkupModal}<span class="name-text">${cleanNickModal}</span></div>`;
         if (movie.isAuction) reqInner += `<div class="modal-grid-box" style="margin-top: 0; margin-bottom: 8px; color: var(--warm-star); border-color: var(--warm-star); background: rgba(38, 17, 26, 0.9); font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 900;">✦ Аукцион ✦</div>`;
-        if (movie.requestedSeason > 0) reqInner += `<div class="modal-grid-box" style="margin-top: 0; color: #fff; border-color: var(--magic-main); font-size: 14px;">${movie.requestedSeason} сезон</div>`;
+        if (movie.requestedSeason > 0) reqInner += `<div class="modal-grid-box" style="margin-top: 0; color: #fff; border-color: #ffffff; font-size: 14px;">${movie.requestedSeason} сезон</div>`;
         
         document.getElementById('modalRequesterBlock').innerHTML = reqInner;
 
@@ -1318,5 +1298,73 @@
     }
     loadMovies();
 </script>
+
+<!-- Магические звезды на фоне -->
+<script>
+    const canvas = document.createElement('canvas');
+    canvas.id = 'starsCanvas';
+    canvas.style.position = 'fixed';
+    canvas.style.top = '0';
+    canvas.style.left = '0';
+    canvas.style.width = '100%';
+    canvas.style.height = '100%';
+    canvas.style.zIndex = '-1';
+    canvas.style.pointerEvents = 'none';
+    document.body.appendChild(canvas);
+
+    const ctx = canvas.getContext('2d');
+    let width, height, stars = [];
+
+    function initStars() {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+        stars = [];
+        
+        const numStars = Math.floor((width * height) / 4000); 
+        for (let i = 0; i < numStars; i++) {
+            stars.push({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                radius: Math.random() * 1.5 + 0.3, 
+                velocity: Math.random() * 0.4 + 0.1, 
+                alpha: Math.random(), 
+                twinkleSpeed: (Math.random() * 0.02) + 0.005, 
+                fadeDir: Math.random() > 0.5 ? 1 : -1 
+            });
+        }
+    }
+
+    function drawStars() {
+        ctx.clearRect(0, 0, width, height);
+        
+        stars.forEach(star => {
+            ctx.beginPath();
+            ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`;
+            ctx.fill();
+            
+            star.y -= star.velocity;
+            
+            if (star.y < 0) {
+                star.y = height;
+                star.x = Math.random() * width;
+            }
+
+            star.alpha += star.twinkleSpeed * star.fadeDir;
+            if (star.alpha <= 0.1) {
+                star.alpha = 0.1;
+                star.fadeDir = 1;
+            } else if (star.alpha >= 1) {
+                star.alpha = 1;
+                star.fadeDir = -1;
+            }
+        });
+        requestAnimationFrame(drawStars);
+    }
+    initStars();
+    drawStars();
+    window.addEventListener('resize', initStars);
+</script>
+
 </body>
 </html>
