@@ -1,7 +1,7 @@
 {
   "_metadata_": {
     "streamer": "susgirl1",
-    "lastUpdated": "11.08.2026 14:14",
+    "lastUpdated": "11.08.2026 14:17",
     "isOnlineBtnVisible": true
   },
   "susgirl1": [
@@ -3019,7 +3019,7 @@
       "userAvatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/f9716445-5ace-4b39-83d5-84c012925d11-profile_image-600x600.png",
       "collection": "Тор (Коллекция)",
       "id": 59,
-      "dateRequested": "11.08.2026 13:01",
+      "dateRequested": "01.03.2025 13:01",
       "status": "Смотрели",
       "ourRating": "7",
       "cried": false,
@@ -3028,62 +3028,7 @@
       "isTheme": false,
       "isWatching": false,
       "isMarvel": true,
-      "dateWatched": "11.08.2026 13:25"
-    },
-    {
-      "title": "Человек-муравей и Оса",
-      "requestedSeason": 0,
-      "year": "2018",
-      "type": "Фильм",
-      "kinopoiskId": "935940",
-      "kinopoiskUrl": "https://www.kinopoisk.ru/film/935940/",
-      "runtime": "1 ч 58 мин",
-      "genres": "боевик, приключения, фантастика",
-      "studios": "🟢 Marvel Studios",
-      "budget": "140.000.000 $",
-      "revenue": "622.674.139 $",
-      "tmdbRating": "6.899",
-      "overview": "Скотт Лэнг, известный также, как Человек-Муравей уже заслужил право оказаться в команде Мстителей, но желание быть ближе к собственной дочке удерживает его в родном Сан-Франциско — до тех пор, пока доктор Хэнк Пим, создавший когда-то изменяющий размеры своего владельца чудо-костюм, не призывает Скотта присоединиться к новой, опасной миссии. А помогать в противостоянии с коварным врагом Человеку-Муравью будет новая напарница — Оса.",
-      "poster": "https://image.tmdb.org/t/p/w500/5r85N1iOnHFoWkyC0EeOw9aEqOW.jpg",
-      "tagline": "«Реальные герои. Нереальных размеров»",
-      "backdrop": "https://image.tmdb.org/t/p/original/iYdgEUE2W2aJkgqfSjf1x3gFfuV.jpg",
-      "cast": [
-        {
-          "name": "Пол Радд",
-          "photo": "https://image.tmdb.org/t/p/w185/6jtwNOLKy0LdsRAKwZqgYMAfd5n.jpg"
-        },
-        {
-          "name": "Эванджелин Лилли",
-          "photo": "https://image.tmdb.org/t/p/w185/zgztLIWTJZm3vjGU7ezhF8GXESJ.jpg"
-        },
-        {
-          "name": "Майкл Дуглас",
-          "photo": "https://image.tmdb.org/t/p/w185/kVYGPIZowzXLEQfAGUNOqKjAbBb.jpg"
-        },
-        {
-          "name": "Ханна Джон-Кеймен",
-          "photo": "https://image.tmdb.org/t/p/w185/V8P9EVelewGVXbuyEylqrzF6iG.jpg"
-        }
-      ],
-      "director": {
-        "name": "Пейтон Рид",
-        "photo": "https://image.tmdb.org/t/p/w185/aucXNycAtFREMIKr6ikmHvd2Mmp.jpg"
-      },
-      "trailer": "https://www.youtube.com/watch?v=EEHQNDLoRUs",
-      "ageRating": "16+",
-      "keywords": "van, dreams, insect, flying, chase",
-      "userAvatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/f9716445-5ace-4b39-83d5-84c012925d11-profile_image-600x600.png",
-      "collection": "Человек-муравей (Коллекция)",
-      "id": 60,
-      "dateRequested": "11.08.2026 13:01",
-      "status": "Не смотрели",
-      "ourRating": "Без оценки",
-      "cried": false,
-      "isAuction": false,
-      "isBanned": false,
-      "isTheme": false,
-      "isWatching": false,
-      "isMarvel": true
+      "dateWatched": "19.06.2026 13:25"
     },
     {
       "title": "Мстители: Война бесконечности",
@@ -3916,7 +3861,63 @@
       "isTheme": false,
       "isWatching": false,
       "isMarvel": true,
-      "dateWatched": "11.08.2026 14:14"
+      "dateWatched": "18.06.2026 14:14"
+    },
+    {
+      "title": "Человек-муравей и Оса",
+      "requestedSeason": 0,
+      "year": "2018",
+      "type": "Фильм",
+      "kinopoiskId": "935940",
+      "kinopoiskUrl": "https://www.kinopoisk.ru/film/935940/",
+      "runtime": "1 ч 58 мин",
+      "genres": "боевик, приключения, фантастика",
+      "studios": "🟢 Marvel Studios",
+      "budget": "140.000.000 $",
+      "revenue": "622.674.139 $",
+      "tmdbRating": "6.899",
+      "overview": "Скотт Лэнг, известный также, как Человек-Муравей уже заслужил право оказаться в команде Мстителей, но желание быть ближе к собственной дочке удерживает его в родном Сан-Франциско — до тех пор, пока доктор Хэнк Пим, создавший когда-то изменяющий размеры своего владельца чудо-костюм, не призывает Скотта присоединиться к новой, опасной миссии. А помогать в противостоянии с коварным врагом Человеку-Муравью будет новая напарница — Оса.",
+      "poster": "https://image.tmdb.org/t/p/w500/5r85N1iOnHFoWkyC0EeOw9aEqOW.jpg",
+      "tagline": "«Реальные герои. Нереальных размеров»",
+      "backdrop": "https://image.tmdb.org/t/p/original/iYdgEUE2W2aJkgqfSjf1x3gFfuV.jpg",
+      "cast": [
+        {
+          "name": "Пол Радд",
+          "photo": "https://image.tmdb.org/t/p/w185/6jtwNOLKy0LdsRAKwZqgYMAfd5n.jpg"
+        },
+        {
+          "name": "Эванджелин Лилли",
+          "photo": "https://image.tmdb.org/t/p/w185/zgztLIWTJZm3vjGU7ezhF8GXESJ.jpg"
+        },
+        {
+          "name": "Майкл Дуглас",
+          "photo": "https://image.tmdb.org/t/p/w185/kVYGPIZowzXLEQfAGUNOqKjAbBb.jpg"
+        },
+        {
+          "name": "Ханна Джон-Кеймен",
+          "photo": "https://image.tmdb.org/t/p/w185/V8P9EVelewGVXbuyEylqrzF6iG.jpg"
+        }
+      ],
+      "director": {
+        "name": "Пейтон Рид",
+        "photo": "https://image.tmdb.org/t/p/w185/aucXNycAtFREMIKr6ikmHvd2Mmp.jpg"
+      },
+      "trailer": "https://www.youtube.com/watch?v=EEHQNDLoRUs",
+      "ageRating": "16+",
+      "keywords": "van, dreams, insect, flying, chase",
+      "userAvatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/f9716445-5ace-4b39-83d5-84c012925d11-profile_image-600x600.png",
+      "collection": "Человек-муравей (Коллекция)",
+      "id": 60,
+      "dateRequested": "02.03.2025 13:01",
+      "status": "Смотрели",
+      "ourRating": "Без оценки",
+      "cried": false,
+      "isAuction": false,
+      "isBanned": false,
+      "isTheme": false,
+      "isWatching": false,
+      "isMarvel": true,
+      "dateWatched": "11.08.2026 14:17"
     }
   ]
 }
