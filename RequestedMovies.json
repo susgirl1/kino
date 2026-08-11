@@ -1,7 +1,7 @@
 {
   "_metadata_": {
     "streamer": "susgirl1",
-    "lastUpdated": "11.08.2026 13:29",
+    "lastUpdated": "11.08.2026 14:10",
     "isOnlineBtnVisible": true
   },
   "susgirl1": [
@@ -105,7 +105,7 @@
       "userAvatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/f9716445-5ace-4b39-83d5-84c012925d11-profile_image-600x600.png",
       "collection": "Сумерки. Сага (Коллекция)",
       "id": 1,
-      "dateRequested": "11.08.2026 12:38",
+      "dateRequested": "01.01.2025 12:38",
       "status": "Смотрели",
       "ourRating": "10",
       "cried": false,
@@ -114,7 +114,7 @@
       "isTheme": false,
       "isWatching": false,
       "isMarvel": false,
-      "dateWatched": "11.08.2026 13:09"
+      "dateWatched": "20.09.2025 13:09"
     },
     {
       "title": "Сумерки. Сага: Новолуние",
@@ -161,7 +161,7 @@
       "userAvatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/f9716445-5ace-4b39-83d5-84c012925d11-profile_image-600x600.png",
       "collection": "Сумерки. Сага (Коллекция)",
       "id": 2,
-      "dateRequested": "11.08.2026 12:38",
+      "dateRequested": "02.01.2025 12:38",
       "status": "Смотрели",
       "ourRating": "10",
       "cried": false,
@@ -170,7 +170,7 @@
       "isTheme": false,
       "isWatching": false,
       "isMarvel": false,
-      "dateWatched": "11.08.2026 13:10"
+      "dateWatched": "21.09.2025 13:10"
     },
     {
       "title": "Сумерки. Сага: Затмение",
@@ -217,7 +217,7 @@
       "userAvatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/f9716445-5ace-4b39-83d5-84c012925d11-profile_image-600x600.png",
       "collection": "Сумерки. Сага (Коллекция)",
       "id": 3,
-      "dateRequested": "11.08.2026 12:38",
+      "dateRequested": "03.01.2025 12:38",
       "status": "Смотрели",
       "ourRating": "10",
       "cried": false,
@@ -226,7 +226,7 @@
       "isTheme": false,
       "isWatching": false,
       "isMarvel": false,
-      "dateWatched": "11.08.2026 13:11"
+      "dateWatched": "22.09.2025 13:11"
     },
     {
       "title": "Сумерки. Сага: Рассвет — Часть 1",
@@ -273,7 +273,7 @@
       "userAvatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/f9716445-5ace-4b39-83d5-84c012925d11-profile_image-600x600.png",
       "collection": "Сумерки. Сага (Коллекция)",
       "id": 4,
-      "dateRequested": "11.08.2026 12:39",
+      "dateRequested": "04.01.2025 12:39",
       "status": "Смотрели",
       "ourRating": "10",
       "cried": false,
@@ -282,7 +282,7 @@
       "isTheme": false,
       "isWatching": false,
       "isMarvel": false,
-      "dateWatched": "11.08.2026 13:11"
+      "dateWatched": "23.09.2025 13:11"
     },
     {
       "title": "Сумерки. Сага: Рассвет — Часть 2",
@@ -329,7 +329,7 @@
       "userAvatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/f9716445-5ace-4b39-83d5-84c012925d11-profile_image-600x600.png",
       "collection": "Сумерки. Сага (Коллекция)",
       "id": 5,
-      "dateRequested": "11.08.2026 12:39",
+      "dateRequested": "05.01.2025 12:39",
       "status": "Смотрели",
       "ourRating": "10",
       "cried": false,
@@ -338,7 +338,7 @@
       "isTheme": false,
       "isWatching": false,
       "isMarvel": false,
-      "dateWatched": "11.08.2026 13:11"
+      "dateWatched": "23.09.2025 13:11"
     },
     {
       "title": "Вампирский засос",
@@ -2808,61 +2808,6 @@
       "dateWatched": "11.08.2026 13:23"
     },
     {
-      "title": "Человек-муравей",
-      "requestedSeason": 0,
-      "year": "2015",
-      "type": "Фильм",
-      "kinopoiskId": "195496",
-      "kinopoiskUrl": "https://www.kinopoisk.ru/film/195496/",
-      "runtime": "1 ч 57 мин",
-      "genres": "фантастика, приключения, боевик",
-      "studios": "🟢 Marvel Studios",
-      "budget": "130.000.000 $",
-      "revenue": "519.311.965 $",
-      "tmdbRating": "7.066",
-      "overview": "Вооружившись удивительной способностью уменьшаться в размере, но обладать при этом большой силой, мошенник Скотт Лэнг должен стать героем и помочь своему наставнику, доктору Хэнку Пиму, сохранить в тайне существование костюма Человека-муравья от угроз нового поколения.",
-      "poster": "https://image.tmdb.org/t/p/w500/9cMJSp2LVSzmPzMWPHIHpeBfECr.jpg",
-      "tagline": "«Героев не судят по размеру»",
-      "backdrop": "https://image.tmdb.org/t/p/original/1K3JmSNUN8OpjYsCjc0Hy0SYxAb.jpg",
-      "cast": [
-        {
-          "name": "Пол Радд",
-          "photo": "https://image.tmdb.org/t/p/w185/6jtwNOLKy0LdsRAKwZqgYMAfd5n.jpg"
-        },
-        {
-          "name": "Майкл Дуглас",
-          "photo": "https://image.tmdb.org/t/p/w185/kVYGPIZowzXLEQfAGUNOqKjAbBb.jpg"
-        },
-        {
-          "name": "Эванджелин Лилли",
-          "photo": "https://image.tmdb.org/t/p/w185/zgztLIWTJZm3vjGU7ezhF8GXESJ.jpg"
-        },
-        {
-          "name": "Кори Столл",
-          "photo": "https://image.tmdb.org/t/p/w185/a5wxOBGmXVwcEqWvEizFk06SDSj.jpg"
-        }
-      ],
-      "director": {
-        "name": "Пейтон Рид",
-        "photo": "https://image.tmdb.org/t/p/w185/aucXNycAtFREMIKr6ikmHvd2Mmp.jpg"
-      },
-      "trailer": "https://www.youtube.com/watch?v=lpZBeZHHpKs",
-      "ageRating": "12+",
-      "keywords": "superhero, ant, master thief, shrinking, based on comic",
-      "userAvatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/f9716445-5ace-4b39-83d5-84c012925d11-profile_image-600x600.png",
-      "collection": "Человек-муравей (Коллекция)",
-      "id": 54,
-      "dateRequested": "11.08.2026 13:00",
-      "status": "Не смотрели",
-      "ourRating": "Без оценки",
-      "cried": false,
-      "isAuction": false,
-      "isBanned": false,
-      "isTheme": false,
-      "isWatching": false,
-      "isMarvel": true
-    },
-    {
       "title": "Первый мститель: Противостояние",
       "requestedSeason": 0,
       "year": "2016",
@@ -3914,6 +3859,62 @@
       "isTheme": false,
       "isWatching": false,
       "isMarvel": true
+    },
+    {
+      "title": "Человек-муравей",
+      "requestedSeason": 0,
+      "year": "2015",
+      "type": "Фильм",
+      "kinopoiskId": "195496",
+      "kinopoiskUrl": "https://www.kinopoisk.ru/film/195496/",
+      "runtime": "1 ч 57 мин",
+      "genres": "фантастика, приключения, боевик",
+      "studios": "🟢 Marvel Studios",
+      "budget": "130.000.000 $",
+      "revenue": "519.311.965 $",
+      "tmdbRating": "7.066",
+      "overview": "Вооружившись удивительной способностью уменьшаться в размере, но обладать при этом большой силой, мошенник Скотт Лэнг должен стать героем и помочь своему наставнику, доктору Хэнку Пиму, сохранить в тайне существование костюма Человека-муравья от угроз нового поколения.",
+      "poster": "https://image.tmdb.org/t/p/w500/9cMJSp2LVSzmPzMWPHIHpeBfECr.jpg",
+      "tagline": "«Героев не судят по размеру»",
+      "backdrop": "https://image.tmdb.org/t/p/original/1K3JmSNUN8OpjYsCjc0Hy0SYxAb.jpg",
+      "cast": [
+        {
+          "name": "Пол Радд",
+          "photo": "https://image.tmdb.org/t/p/w185/6jtwNOLKy0LdsRAKwZqgYMAfd5n.jpg"
+        },
+        {
+          "name": "Майкл Дуглас",
+          "photo": "https://image.tmdb.org/t/p/w185/kVYGPIZowzXLEQfAGUNOqKjAbBb.jpg"
+        },
+        {
+          "name": "Эванджелин Лилли",
+          "photo": "https://image.tmdb.org/t/p/w185/zgztLIWTJZm3vjGU7ezhF8GXESJ.jpg"
+        },
+        {
+          "name": "Кори Столл",
+          "photo": "https://image.tmdb.org/t/p/w185/a5wxOBGmXVwcEqWvEizFk06SDSj.jpg"
+        }
+      ],
+      "director": {
+        "name": "Пейтон Рид",
+        "photo": "https://image.tmdb.org/t/p/w185/aucXNycAtFREMIKr6ikmHvd2Mmp.jpg"
+      },
+      "trailer": "https://www.youtube.com/watch?v=lpZBeZHHpKs",
+      "ageRating": "12+",
+      "keywords": "superhero, ant, master thief, shrinking, based on comic",
+      "userAvatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/f9716445-5ace-4b39-83d5-84c012925d11-profile_image-600x600.png",
+      "collection": "Человек-муравей (Коллекция)",
+      "id": 54,
+      "dateRequested": "11.08.2026 13:00",
+      "status": "Смотрели",
+      "ourRating": "Без оценки",
+      "cried": false,
+      "isAuction": false,
+      "isBanned": false,
+      "isTheme": false,
+      "isWatching": false,
+      "isMarvel": true,
+      "dateWatched": "11.08.2026 14:10"
     }
   ]
 }
