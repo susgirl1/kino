@@ -1,7 +1,7 @@
 {
   "_metadata_": {
     "streamer": "susgirl1",
-    "lastUpdated": "11.08.2026 14:11",
+    "lastUpdated": "11.08.2026 14:13",
     "isOnlineBtnVisible": true
   },
   "susgirl1": [
@@ -2808,61 +2808,6 @@
       "dateWatched": "16.06.2026 13:23"
     },
     {
-      "title": "Первый мститель: Противостояние",
-      "requestedSeason": 0,
-      "year": "2016",
-      "type": "Фильм",
-      "kinopoiskId": "822708",
-      "kinopoiskUrl": "https://www.kinopoisk.ru/film/822708/",
-      "runtime": "2 ч 26 мин",
-      "genres": "приключения, боевик, фантастика",
-      "studios": "🟢 Marvel Studios",
-      "budget": "250.000.000 $",
-      "revenue": "1.155.046.416 $",
-      "tmdbRating": "7.45",
-      "overview": "Мстители под руководством Капитана Америки оказываются участниками разрушительного инцидента, имеющего международный масштаб. Эти события заставляют правительство задуматься над тем, чтобы начать регулировать действия всех людей с особыми способностями, введя «Акт о регистрации супергероев», вынуждая их раскрыть свои личности и работать на правительственные службы.  Видя в этом законе нарушение гражданских прав и плевок во всё, что он верит, Стив Роджерс открыто восстаёт против нового режима, ведя за собой группу героев, поддерживающих его мнение. В свою же очередь, Тони Старк видит правильность в новом законе, и становится во главе героев, поддерживающих его. Всё это приводит к неизбежному расколу Мстителей, и гражданской войне между двумя сторонами. Сражаясь друг с другом, Старк и Роджерс не знают о том, что таинственный Барон Земо уже строит свои собственные планы, воспользовавшись расколом величайших героев Земли.",
-      "poster": "https://image.tmdb.org/t/p/w500/7TWq9G7zU0lLG7WpMK6f5EQwwf2.jpg",
-      "tagline": "«Разделившись, мы падём»",
-      "backdrop": "https://image.tmdb.org/t/p/original/wdwcOBMkt3zmPQuEMxB3FUtMio2.jpg",
-      "cast": [
-        {
-          "name": "Крис Эванс",
-          "photo": "https://image.tmdb.org/t/p/w185/3bOGNsHlrswhyW79uvIHH1V43JI.jpg"
-        },
-        {
-          "name": "Роберт Дауни мл.",
-          "photo": "https://image.tmdb.org/t/p/w185/5qHNjhtjMD4YWH3UP0rm4tKwxCL.jpg"
-        },
-        {
-          "name": "Скарлетт Йоханссон",
-          "photo": "https://image.tmdb.org/t/p/w185/druW5adKddizHNSoPbI0q7Mvn0K.jpg"
-        },
-        {
-          "name": "Себастиан Стэн",
-          "photo": "https://image.tmdb.org/t/p/w185/v20RLWst39klatsqUgSrwHxhwee.jpg"
-        }
-      ],
-      "director": {
-        "name": "Джо Руссо",
-        "photo": "https://image.tmdb.org/t/p/w185/o0OXjFzL10jCy89iAs7UzzSbyoK.jpg"
-      },
-      "trailer": "https://www.youtube.com/watch?v=WICbORgwXow",
-      "ageRating": "16+",
-      "keywords": "superhero, based on comic, sequel, super soldier, aftercreditsstinger",
-      "userAvatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/f9716445-5ace-4b39-83d5-84c012925d11-profile_image-600x600.png",
-      "collection": "Первый мститель (Коллекция)",
-      "id": 55,
-      "dateRequested": "11.08.2026 13:00",
-      "status": "Не смотрели",
-      "ourRating": "Без оценки",
-      "cried": false,
-      "isAuction": false,
-      "isBanned": false,
-      "isTheme": false,
-      "isWatching": false,
-      "isMarvel": true
-    },
-    {
       "title": "Чёрная вдова",
       "requestedSeason": 0,
       "year": "2021",
@@ -3905,7 +3850,7 @@
       "userAvatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/f9716445-5ace-4b39-83d5-84c012925d11-profile_image-600x600.png",
       "collection": "Человек-муравей (Коллекция)",
       "id": 54,
-      "dateRequested": "11.08.2026 13:00",
+      "dateRequested": "24.02.2025 13:00",
       "status": "Смотрели",
       "ourRating": "Без оценки",
       "cried": false,
@@ -3914,7 +3859,63 @@
       "isTheme": false,
       "isWatching": false,
       "isMarvel": true,
-      "dateWatched": "11.08.2026 14:11"
+      "dateWatched": "17.06.2026 14:11"
+    },
+    {
+      "title": "Первый мститель: Противостояние",
+      "requestedSeason": 0,
+      "year": "2016",
+      "type": "Фильм",
+      "kinopoiskId": "822708",
+      "kinopoiskUrl": "https://www.kinopoisk.ru/film/822708/",
+      "runtime": "2 ч 26 мин",
+      "genres": "приключения, боевик, фантастика",
+      "studios": "🟢 Marvel Studios",
+      "budget": "250.000.000 $",
+      "revenue": "1.155.046.416 $",
+      "tmdbRating": "7.45",
+      "overview": "Мстители под руководством Капитана Америки оказываются участниками разрушительного инцидента, имеющего международный масштаб. Эти события заставляют правительство задуматься над тем, чтобы начать регулировать действия всех людей с особыми способностями, введя «Акт о регистрации супергероев», вынуждая их раскрыть свои личности и работать на правительственные службы.  Видя в этом законе нарушение гражданских прав и плевок во всё, что он верит, Стив Роджерс открыто восстаёт против нового режима, ведя за собой группу героев, поддерживающих его мнение. В свою же очередь, Тони Старк видит правильность в новом законе, и становится во главе героев, поддерживающих его. Всё это приводит к неизбежному расколу Мстителей, и гражданской войне между двумя сторонами. Сражаясь друг с другом, Старк и Роджерс не знают о том, что таинственный Барон Земо уже строит свои собственные планы, воспользовавшись расколом величайших героев Земли.",
+      "poster": "https://image.tmdb.org/t/p/w500/7TWq9G7zU0lLG7WpMK6f5EQwwf2.jpg",
+      "tagline": "«Разделившись, мы падём»",
+      "backdrop": "https://image.tmdb.org/t/p/original/wdwcOBMkt3zmPQuEMxB3FUtMio2.jpg",
+      "cast": [
+        {
+          "name": "Крис Эванс",
+          "photo": "https://image.tmdb.org/t/p/w185/3bOGNsHlrswhyW79uvIHH1V43JI.jpg"
+        },
+        {
+          "name": "Роберт Дауни мл.",
+          "photo": "https://image.tmdb.org/t/p/w185/5qHNjhtjMD4YWH3UP0rm4tKwxCL.jpg"
+        },
+        {
+          "name": "Скарлетт Йоханссон",
+          "photo": "https://image.tmdb.org/t/p/w185/druW5adKddizHNSoPbI0q7Mvn0K.jpg"
+        },
+        {
+          "name": "Себастиан Стэн",
+          "photo": "https://image.tmdb.org/t/p/w185/v20RLWst39klatsqUgSrwHxhwee.jpg"
+        }
+      ],
+      "director": {
+        "name": "Джо Руссо",
+        "photo": "https://image.tmdb.org/t/p/w185/o0OXjFzL10jCy89iAs7UzzSbyoK.jpg"
+      },
+      "trailer": "https://www.youtube.com/watch?v=WICbORgwXow",
+      "ageRating": "16+",
+      "keywords": "superhero, based on comic, sequel, super soldier, aftercreditsstinger",
+      "userAvatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/f9716445-5ace-4b39-83d5-84c012925d11-profile_image-600x600.png",
+      "collection": "Первый мститель (Коллекция)",
+      "id": 55,
+      "dateRequested": "25.02.2025 13:00",
+      "status": "Смотрели",
+      "ourRating": "Без оценки",
+      "cried": false,
+      "isAuction": false,
+      "isBanned": false,
+      "isTheme": false,
+      "isWatching": false,
+      "isMarvel": true,
+      "dateWatched": "11.08.2026 14:13"
     }
   ]
 }
