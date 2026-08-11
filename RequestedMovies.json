@@ -1,7 +1,7 @@
 {
   "_metadata_": {
     "streamer": "susgirl1",
-    "lastUpdated": "11.08.2026 14:13",
+    "lastUpdated": "11.08.2026 14:14",
     "isOnlineBtnVisible": true
   },
   "susgirl1": [
@@ -2863,61 +2863,6 @@
       "isMarvel": true
     },
     {
-      "title": "Чёрная Пантера",
-      "requestedSeason": 0,
-      "year": "2018",
-      "type": "Фильм",
-      "kinopoiskId": "623250",
-      "kinopoiskUrl": "https://www.kinopoisk.ru/film/623250/",
-      "runtime": "2 ч 14 мин",
-      "genres": "боевик, приключения, фантастика",
-      "studios": "🟢 Marvel Studios",
-      "budget": "200.000.000 $",
-      "revenue": "1.349.926.083 $",
-      "tmdbRating": "7.365",
-      "overview": "С первого взгляда можно решить, что Ваканда — обычная территория дикой Африки, но это не так. Здесь, в недрах пустынных земель, скрываются залежи уникального металла, способного поглощать вибрацию. Многие пытались добраться до него, разоряя всё на своём пути и принося смерть аборигенам, но каждый раз таинственный дух саванны — Чёрная Пантера — вставал на защиту угнетённых.  Спустя много лет беда снова приходит в Ваканду, и в этот раз враг заручился поддержкой современных технологий. Когда шансов почти не остаётся, Т`Чалла, молодой принц Ваканды, узнаёт, что именно ему предстоит возродить легенду и продолжить вечную борьбу, надев маску Чёрной Пантеры.",
-      "poster": "https://image.tmdb.org/t/p/w500/ndpwgAANbZSMwgTcxmQ7o4SKDsd.jpg",
-      "tagline": "\"Да здравствует король\"",
-      "backdrop": "https://image.tmdb.org/t/p/original/b6ZJZHUdMEFECvGiDpJjlfUWela.jpg",
-      "cast": [
-        {
-          "name": "Чедвик Боузман",
-          "photo": "https://image.tmdb.org/t/p/w185/nL16SKfyP1b7Hk6LsuWiqMfbdb8.jpg"
-        },
-        {
-          "name": "Майкл Б. Джордан",
-          "photo": "https://image.tmdb.org/t/p/w185/sMBpav8cK7t7Nk0yf4tuNOqNUyW.jpg"
-        },
-        {
-          "name": "Лупита Нионго",
-          "photo": "https://image.tmdb.org/t/p/w185/y40Wu1T742kynOqtwXASc5Qgm49.jpg"
-        },
-        {
-          "name": "Данай Гурира",
-          "photo": "https://image.tmdb.org/t/p/w185/z7H7QeQvr24vskGlANQhG43vozQ.jpg"
-        }
-      ],
-      "director": {
-        "name": "Райан Куглер",
-        "photo": "https://image.tmdb.org/t/p/w185/dux4DCDaL6c639DTXGiV7nm1wcN.jpg"
-      },
-      "trailer": "https://www.youtube.com/watch?v=Mlc6zMvxmqU",
-      "ageRating": "16+",
-      "keywords": "africa, superhero, based on comic, aftercreditsstinger, duringcreditsstinger",
-      "userAvatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/f9716445-5ace-4b39-83d5-84c012925d11-profile_image-600x600.png",
-      "collection": "Чёрная Пантера (Коллекция)",
-      "id": 57,
-      "dateRequested": "11.08.2026 13:00",
-      "status": "Не смотрели",
-      "ourRating": "Без оценки",
-      "cried": false,
-      "isAuction": false,
-      "isBanned": false,
-      "isTheme": false,
-      "isWatching": false,
-      "isMarvel": true
-    },
-    {
       "title": "Человек-паук: Возвращение домой",
       "requestedSeason": 0,
       "year": "2017",
@@ -3915,7 +3860,63 @@
       "isTheme": false,
       "isWatching": false,
       "isMarvel": true,
-      "dateWatched": "11.08.2026 14:13"
+      "dateWatched": "18.06.2026 14:13"
+    },
+    {
+      "title": "Чёрная Пантера",
+      "requestedSeason": 0,
+      "year": "2018",
+      "type": "Фильм",
+      "kinopoiskId": "623250",
+      "kinopoiskUrl": "https://www.kinopoisk.ru/film/623250/",
+      "runtime": "2 ч 14 мин",
+      "genres": "боевик, приключения, фантастика",
+      "studios": "🟢 Marvel Studios",
+      "budget": "200.000.000 $",
+      "revenue": "1.349.926.083 $",
+      "tmdbRating": "7.365",
+      "overview": "С первого взгляда можно решить, что Ваканда — обычная территория дикой Африки, но это не так. Здесь, в недрах пустынных земель, скрываются залежи уникального металла, способного поглощать вибрацию. Многие пытались добраться до него, разоряя всё на своём пути и принося смерть аборигенам, но каждый раз таинственный дух саванны — Чёрная Пантера — вставал на защиту угнетённых.  Спустя много лет беда снова приходит в Ваканду, и в этот раз враг заручился поддержкой современных технологий. Когда шансов почти не остаётся, Т`Чалла, молодой принц Ваканды, узнаёт, что именно ему предстоит возродить легенду и продолжить вечную борьбу, надев маску Чёрной Пантеры.",
+      "poster": "https://image.tmdb.org/t/p/w500/ndpwgAANbZSMwgTcxmQ7o4SKDsd.jpg",
+      "tagline": "\"Да здравствует король\"",
+      "backdrop": "https://image.tmdb.org/t/p/original/b6ZJZHUdMEFECvGiDpJjlfUWela.jpg",
+      "cast": [
+        {
+          "name": "Чедвик Боузман",
+          "photo": "https://image.tmdb.org/t/p/w185/nL16SKfyP1b7Hk6LsuWiqMfbdb8.jpg"
+        },
+        {
+          "name": "Майкл Б. Джордан",
+          "photo": "https://image.tmdb.org/t/p/w185/sMBpav8cK7t7Nk0yf4tuNOqNUyW.jpg"
+        },
+        {
+          "name": "Лупита Нионго",
+          "photo": "https://image.tmdb.org/t/p/w185/y40Wu1T742kynOqtwXASc5Qgm49.jpg"
+        },
+        {
+          "name": "Данай Гурира",
+          "photo": "https://image.tmdb.org/t/p/w185/z7H7QeQvr24vskGlANQhG43vozQ.jpg"
+        }
+      ],
+      "director": {
+        "name": "Райан Куглер",
+        "photo": "https://image.tmdb.org/t/p/w185/dux4DCDaL6c639DTXGiV7nm1wcN.jpg"
+      },
+      "trailer": "https://www.youtube.com/watch?v=Mlc6zMvxmqU",
+      "ageRating": "16+",
+      "keywords": "africa, superhero, based on comic, aftercreditsstinger, duringcreditsstinger",
+      "userAvatar": "https://static-cdn.jtvnw.net/jtv_user_pictures/f9716445-5ace-4b39-83d5-84c012925d11-profile_image-600x600.png",
+      "collection": "Чёрная Пантера (Коллекция)",
+      "id": 57,
+      "dateRequested": "26.02.2025 13:00",
+      "status": "Смотрели",
+      "ourRating": "Без оценки",
+      "cried": false,
+      "isAuction": false,
+      "isBanned": false,
+      "isTheme": false,
+      "isWatching": false,
+      "isMarvel": true,
+      "dateWatched": "11.08.2026 14:14"
     }
   ]
 }
